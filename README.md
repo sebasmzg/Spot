@@ -1,0 +1,2 @@
+# Spot
+Javascript module project
