@@ -6,8 +6,12 @@ body{
 a{
     text-decoration: none;
 }
+
+.hidden{
+    display: none;
+}
 /*income zone*/
-.income{
+#incomeForm{
     position: fixed;
     top: 50%;
     left: 50%;
@@ -15,7 +19,7 @@ a{
     background-color: white;
     border: 1px solid black;
     border-radius: 20px;
-    padding: 20px 100px 20px 100px;
+    padding: 30px 100px 30px 100px;
 
 }
 
@@ -86,16 +90,46 @@ a{
 }
 
 .logIn{
+    display: flex;
+    justify-content: center;
     margin-top: 70px;
 }
 
-.logIn p{
-    text-align: center;
-    color: rgb(57, 57, 233);
+#buttonLogIn{
+    border: none;
+    background: none;
+    font-size: 15px;
     transition: color 0.3s;
 }
 
-.logIn p:hover{
+.logIn button{
+    color: rgb(57, 57, 233);
+}
+
+#buttonLogIn:hover{
     color: rgb(255, 0, 0);
 }
 /*End of the income zone*/
+
+
+/*Log in zone*/
+.logoLogIn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-bottom: 20px;
+}
+.imageLogoLogIn{
+    width: 70px;
+    height: 70px;
+    background-image: url("../../../assets/img/logo.png");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.logoLogIn p{
+    border-bottom: 1px dashed black;
+    text-align: center;
+}

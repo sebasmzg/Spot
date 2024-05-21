@@ -5,32 +5,61 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="css/styles.css">
-    <script src="js/script.js"></script>
+    <script src="js/script.js" defer></script>
 </head>
 <body>
+    <section id="incomeForm">
+        <article id="income">
+            <div class="logo">
+                <div class="imageLogo"></div>
+                <h1>Spot</h1>
+            </div>
+
+            <div class="formIncome">
+                <h2>Ingresa</h2>
+                <p>Ingresa tu username y contraseña</p>
+                <form action="" class="form">
+                    <label for="userName"></label>
+                    <input type="text" placeholder="User name" name="user_name" id="name" class="itemForm">
+                    
+                    <label for="password"></label>
+                    <input type="text" placeholder="Contraseña" name="password" id="password" class="itemForm">
+                    
+                    <button type="text" class="signIn itemForm">Ingresar</button>
+                </form>
+            </div>
     
-    <section class="income">
-        <div class="logo">
-            <div class="imageLogo"></div>
-            <h1>Spot</h1>
-        </div>
-        
-        <div class="formIncome">
-            <h2>Ingresa</h2>
-            <p>Ingresa tu username y contraseña</p>
-            <form action="" class="form">
-                <label for="userName"></label>
-                <input type="text" placeholder="User name" name="user_name" id="name" class="itemForm">
-                
-                <label for="password"></label>
-                <input type="text" placeholder="Contraseña" name="password" id="password" class="itemForm">
-                
-                <button type="submit" class="signIn itemForm">Ingresar</button>
-            </form>
-        </div>
+            
+        </article>
+
+        <article id="register">
+            <div class="logoLogIn">
+                <div class="imageLogoLogIn"></div>
+                <p>Tu brújula para los rincones únicos de tu ciudad</p>
+            </div>
+            <div class="formIncome formLogIn">
+                <h2>Crea tu perfil</h2>
+                <p>Crea tu cuenta</p>
+                <form action="" class="form">
+                    <label for="email"></label>
+                    <input type="text" placeholder="Email" name="email" id="email" class="itemForm">
+                    
+                    <label for="name"></label>
+                    <input type="text" placeholder="Nombre" name="name" id="name" class="itemForm">
+                    
+                    <label for="userName"></label>
+                    <input type="text" placeholder="User name" name="userName" id="userName" class="itemForm">
+
+                    <label for="password"></label>
+                    <input type="text" placeholder="Contraseña" name="password" id="password" class="itemForm">
+
+                    <button type="text" class="logIn itemForm">Registrate</button>
+                </form>
+            </div>
+        </article>
 
         <div class="logIn">
-            <a href=""><p>Registrate</p></a>
+            <button id="buttonLogIn"><p>Registrate</p></button>
         </div>
     </section>
 </body>
