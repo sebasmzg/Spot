@@ -1,0 +1,135 @@
+body{
+    font-family: Arial, sans-serif;
+    background-color: rgb(168, 168, 168);
+}
+
+a{
+    text-decoration: none;
+}
+
+.hidden{
+    display: none;
+}
+/*income zone*/
+#incomeForm{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 20px;
+    padding: 30px 100px 30px 100px;
+
+}
+
+/*logo area*/
+.logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 50px;
+}
+.imageLogo{
+    width: 50px;
+    height: 50px;
+    background-image: url("../../../assets/img/logo.png");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.logo h1{
+    font-size: 35px;
+}
+
+/*form area*/
+.formIncome{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form{
+    display: flex;
+    flex-direction: column;
+}
+
+.formIncome p{
+    margin: 0;
+    margin-bottom: 20px;
+}
+
+.itemForm{
+    margin-top: 20px;
+    font-size: 22px;
+    border: 1px solid gray;
+    border-radius: 10px;
+    padding: 5px;
+    cursor: pointer;
+    box-shadow: 6px 5px 10px rgba(8, 8, 8, 0.199);
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s, color 0.1s;
+}
+
+.itemForm:hover {
+    color: rgb(255, 255, 255);
+    background-color: #85b9db;
+    transform: translateX(-10px);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+}
+
+.itemForm:active {
+    color: aqua;
+    background-color: rgb(224, 83, 83);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.signIn{
+    margin-top: 40px;
+    background-color: rgb(212, 209, 209);
+}
+
+.logIn{
+    display: flex;
+    justify-content: center;
+    margin-top: 70px;
+}
+
+#buttonLogIn{
+    border: none;
+    background: none;
+    font-size: 15px;
+    transition: color 0.3s;
+}
+
+.logIn button{
+    color: rgb(57, 57, 233);
+}
+
+#buttonLogIn:hover{
+    color: rgb(255, 0, 0);
+}
+/*End of the income zone*/
+
+
+/*Log in zone*/
+.logoLogIn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-bottom: 20px;
+}
+.imageLogoLogIn{
+    width: 70px;
+    height: 70px;
+    background-image: url("../../../assets/img/logo.png");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.logoLogIn p{
+    border-bottom: 1px dashed black;
+    text-align: center;
+}
