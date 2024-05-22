@@ -1,3 +1,7 @@
+*{
+    margin: 0;
+}
+
 body{
     font-family: Arial, sans-serif;
     background-color: rgb(168, 168, 168);
@@ -10,17 +14,69 @@ a{
 .hidden{
     display: none;
 }
+
+/*up zone on the income button*/
+#incomeZoneButton{
+    display: flex;
+    justify-content: right;
+    width: 100%;
+    background-color: white;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+#incomeButton{
+    background-color: rgb(132, 154, 226);
+    border:1px solid rgb(75, 75, 75);
+    border-radius: 15px;
+    font-size: 20px;
+    padding: 8px;
+    margin-right: 5%;
+    transition: background-color 0.3s, color 0.1s, padding 0.5s;
+}
+
+
+#incomeButton:hover{
+    background-color: rgb(110, 200, 235);
+    color: white;
+    padding: 12px;
+}
+
+/*End zone*/
+
+
 /*income zone*/
 #incomeForm{
     position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
-    background-color: white;
+    background-color: rgb(235, 235, 235);
     border: 1px solid black;
     border-radius: 20px;
     padding: 30px 100px 30px 100px;
 
+}
+
+.buttonSvg{
+    position: absolute;
+    right: 0;
+    top: 0;
+    margin: 10px;
+    background: none;
+    border: none;
+}
+
+#incomeForm svg{
+    width: 30px;
+    height: 30px;
+    transition: width 0.5s, heigth 0.5s, transform 0.3s;
+}
+
+#incomeForm svg:hover{
+    width: 32px;
+    height: 32px;
+    transform: translateY(-5px);
 }
 
 /*logo area*/
@@ -94,6 +150,10 @@ a{
     justify-content: center;
     margin-top: 70px;
 }
+
+/* .logIn p{
+    background-color: blue;
+} */
 
 #buttonLogIn{
     border: none;
