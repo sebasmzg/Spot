@@ -4,18 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
    
-    <!---Bootstrap link-->
-    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
- -->
+    
     <!-- Leaflet CSS -->
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
+    
     <!-- Leaflet Locate Control CSS -->
     <link rel="stylesheet" href="https://unpkg.com/leaflet.locatecontrol/dist/L.Control.Locate.min.css" />
+    
     <!-- Leaflet Routing Machine CSS -->
     <link rel="stylesheet" href="https://unpkg.com/leaflet-routing-machine@latest/dist/leaflet-routing-machine.css" />
+    
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="map.css">
-    <link rel="stylesheet" href="menu.css">
+    <link rel="stylesheet" href="./src/components/map/css/map.css">
+    <link rel="stylesheet" href="./src/components/menu/css/menu.css">
+    <link rel="stylesheet" href="index.css">
 
     <!--Icono pestaña-->
     <link rel="icon" href="./src/assets/img/logo_spot.png">
@@ -31,13 +33,13 @@
                     <div class="menuToggle"></div>
                     <ul>
                         <li class="list active" style="--clr: #f44336;">
-                            <a href="#">
+                            <a href="index.html">
                                 <span class="icon"><ion-icon name ="map-outline"></ion-icon></span>
                                 <span class="text">Map</span>
                             </a>
                         </li>
                         <li class="list" style="--clr: #2196f3;">
-                            <a href="#">
+                            <a href="./src/components/videoPage/videos.html">
                                 <span class="icon"><ion-icon name ="albums-outline"></ion-icon></span>
                                 <span class="text">Discover</span>
                             </a>
@@ -49,7 +51,7 @@
                             </a>
                         </li>
                         <li class="list" style="--clr: #ffa117;">
-                            <a href="#">
+                            <a href="./src/components/profile/profile.html">
                                 <span class="icon"><ion-icon name ="person-outline"></ion-icon></span>
                                 <span class="text">Profile</span>
                             </a>
@@ -71,12 +73,14 @@
                         <button id="stopRouting">Detener recorrido</button>
                     </div>
                 </div>
-                <!-- <div class="btn-group pre-scrollable" role="group" id="categories">
-                    <button type="button" class="btn btn-secondary">1</button>
-                    <button type="button" class="btn btn-secondary">2</button>
-                    <button type="button" class="btn btn-secondary">3</button>
-                    <button type="button" class="btn btn-secondary">4</button>
-                </div> -->
+                <div class="btn-group">
+                    <button type="button" class="category">Arte</button>
+                    <button type="button" class="category">Música</button>
+                    <button type="button" class="category">Literatura</button>
+                    <button type="button" class="category">Danza</button>
+                    <button type="button" class="category">Historia</button>
+                    <button type="button" class="category">Evento</button>
+                </div>
             </div>
         </div>
     </div>
@@ -91,13 +95,9 @@
     <script src="https://unpkg.com/leaflet.locatecontrol/dist/L.Control.Locate.min.js"></script>
     <script src="https://unpkg.com/leaflet-routing-machine@latest/dist/leaflet-routing-machine.js"></script>
 
-    <!---Scripts Bootstrap-->
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
-
     <!--Script de la aplicación-->
-    <script src="map.js"></script>
-    <script src="menu.js"></script>
+    <script src="./src/components/map/js/map.js"></script>
+    <script src="./src/components/menu/js/menu.js"></script>
 
 </body>
 </html>
