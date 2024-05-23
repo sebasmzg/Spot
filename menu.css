@@ -52,9 +52,9 @@
   .navigation ul {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 50px;
     width: 100%;
-    
+    justify-content: space-evenly;
   }
   .navigation ul li {
     list-style: none;
@@ -63,7 +63,6 @@
     height: 60px;
     padding: 0 10px;
     transition: 0.5s;
-    
   }
   .navigation ul li.active {
     transform: translateX(30px);

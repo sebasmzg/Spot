@@ -39,20 +39,17 @@ map.on('locationerror', function(e) { //muestra un mensaje si no se puede accede
 
 locateControl.start(); // Inicia la localización del usuario
 
-var LeafIcon = L.Icon.extend({ //crea una clase de iconos //.EXTEND() es una función que crea una clase que hereda de otra clase
+var pointIcon = L.Icon.extend({ //crea una clase de iconos //.EXTEND() es una función que crea una clase que hereda de otra clase
     options: {
-        shadowUrl: './src/assets/img/leaf-shadow.png',
-        iconSize:     [38, 95],//tamaño del icono
-        shadowSize:   [50, 64],//tamaño de la sombra
-        iconAnchor:   [22, 94],//punto del icono que corresponderá a la ubicación del marcador
-        shadowAnchor: [4, 62],//lo mismo para la sombra
+        iconSize:     [35, 35],//tamaño del icono
         popupAnchor:  [-3, -76]//punto desde el cual el popup debe abrirse en relación con iconAnchor
     }
 });
 
-var greenIcon = new LeafIcon({iconUrl: './src/assets/img/leaf-green.png'});
-var redIcon = new LeafIcon({iconUrl: './src/assets/img/leaf-red.png'});
-var orangeIcon = new LeafIcon({iconUrl: './src/assets/img/leaf-orange.png'});
+var greenIcon = new pointIcon({iconUrl: './src/assets/img/leaf-green.png'});
+var redIcon = new pointIcon({iconUrl: './src/assets/img/leaf-red.png'});
+var orangeIcon = new pointIcon({iconUrl: './src/assets/img/leaf-orange.png'});
+var logoIcon = new pointIcon({iconUrl: './src/assets/img/logo.png'});
 //crea varios iconos a partir de la clase LeafIcon
 
 // Inicializa el control de enrutamiento
@@ -84,6 +81,10 @@ function createPoint(lat, lng, icon, card){
                 // Establece la ruta desde la ubicación del usuario hasta el punto seleccionado
                 control.setWaypoints([userLocation, L.latLng(lat, lng)]);
                 modal.style.display = 'none'; // Cierra el modal
+
+                var modal2 = document.getElementById('myModal2'); // obtiene el modal2
+                modal2.style.display = 'block'; // muestra el modal2
+                
             } else {
                 alert("Ubicación del usuario no encontrada.");
             }
@@ -92,12 +93,21 @@ function createPoint(lat, lng, icon, card){
         document.getElementById('stopRouting').onclick = function() {
             // Detiene el enrutamiento removiendo los puntos de ruta
             control.setWaypoints([]);
-            modal.style.display = 'none'; // Cierra el modal
+            var modal2 = document.getElementById('myModal2'); // obtiene el modal2
+            modal2.style.display = 'none'; // oculta el modal2
+
+            var span2 = document.getElementsByClassName('close')[1]; // Obtener el segundo span (el del modal2)
+
+            span2.onclick = function() { // Añadir evento al segundo span
+            control.setWaypoints([]); // Detener el enrutamiento removiendo los puntos de ruta
+            modal2.style.display = 'none'; // Ocultar el modal2
+};
+
         };
     });
 }
 
-/*
+
 // Evento que se dispara cuando se calcula una ruta
 control.on('routesfound', function(e) {
     var routes = e.routes;
@@ -105,33 +115,26 @@ control.on('routesfound', function(e) {
     
     // Accede a la distancia y tiempo desde el resumen de la ruta
     var distance = summary.totalDistance; // Distancia total en metros
-    var time = summary.totalTime; // Tiempo total en segundos
 
     // Convierte la distancia de metros a kilómetros
     var distanceKm = (distance / 1000).toFixed(2);
 
-    // Convierte el tiempo de segundos a minutos
-    var timeMin = (time / 60).toFixed(0);
-
     // Muestra la distancia y el tiempo en tu interfaz de usuario
     var distanceElement = document.getElementById('distance');
-    var timeElement = document.getElementById('time');
 
     distanceElement.innerHTML = 'Distancia: ' + distanceKm + ' km';
-    timeElement.innerHTML = 'Tiempo estimado: ' + timeMin + ' minutos';
 });
-*/
 
 
-//crear los puntos
-
-createPoint(6.219228982112051, -75.58360417670856, greenIcon, "<b>Green Leaf Information</b><br>More details about this location.");
-createPoint(6.217324106489384, -75.58774406747969, greenIcon, "<b>Green Leaf Information</b><br>Additional details about this place.");
-createPoint(6.225302013240884, -75.58525497750676, redIcon, "<b>Red Leaf Information</b><br>More details about this red leaf location.");
-createPoint(6.218476004247808, -75.57238037419849, orangeIcon, "<b>Orange Leaf Information</b><br>Additional details about this orange leaf place.");
+//crear los puntos en el mapa
+createPoint(6.219228982112051, -75.58360417670856, logoIcon, "<b>Nombre de spot</b><br>Información detallada del spot.");
+createPoint(6.217324106489384, -75.58774406747969, logoIcon, "<b>Nombre de spot</b><br>Información detallada del spot.");
+createPoint(6.225302013240884, -75.58525497750676, logoIcon, "<b>Nombre de spot</b><br>Información detallada del spot.");
+createPoint(6.218476004247808, -75.57238037419849, logoIcon, "<b>Nombre de spot</b><br>Información detallada del spot.");
 
 //cerrar el modal
 var modal = document.getElementById('myModal');
+var modal2 = document.getElementById('myModal2');
 var span = document.getElementsByClassName('close')[0];
 
 span.onclick = function() { // cierra el modal si se hace clic en la 'x'
@@ -141,5 +144,8 @@ span.onclick = function() { // cierra el modal si se hace clic en la 'x'
 window.onclick = function(event) { // cierra el modal si se hace clic fuera de él
     if (event.target == modal) {
         modal.style.display = 'none';
+    }
+    if(event.target == modal2) {
+        modal.style.display = 'none'
     }
 }
