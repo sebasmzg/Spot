@@ -2,8 +2,16 @@ const midButtom0 = document.getElementById("mid-buttom-0");
 const midButtom1 = document.getElementById("mid-buttom-1");
 const midButtom2 = document.getElementById("mid-buttom-2");
 const grid = document.getElementById("gridZone");
-const Zcomen = document.getElementById("comentarios")
-const map = document.getElementById("Map")
+const Zcomen = document.getElementById("comentarios");
+const map = document.getElementById("Map");
+const mainButtom1 = document.getElementById("main-buttom");
+const mainButtom2 = document.getElementById("main-buttom2");
+
+
+mainButtom1.onclick = function(){
+    mainButtom1.style.display = "none";
+    mainButtom2.style.display = "block";
+}
 
 midButtom0.onclick = function(){
     grid.style.display = "block";
