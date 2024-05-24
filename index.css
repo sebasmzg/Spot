@@ -34,3 +34,42 @@
     text-decoration: none;
     cursor: pointer;
 }
+
+.btn-group {
+    z-index: 1000;
+    position: fixed;
+    bottom: 20px;
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+.category-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    white-space: nowrap;
+    gap: 10px;
+    padding: 10px;
+}
+
+.category {
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 12px 20px;
+    cursor: pointer;
+    display: inline-block;
+    border: none;
+}
+
+.category:hover {
+    background-color: #ccc; /* Cambia el color de fondo al pasar por encima */
+}
+
+.category.active {
+    background-color: #4CAF50; /* Color de fondo para el botón activo */
+    color: white; /* Color del texto para el botón activo */
+}

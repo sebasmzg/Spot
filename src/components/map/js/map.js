@@ -149,3 +149,14 @@ window.onclick = function(event) { // cierra el modal si se hace clic fuera de √
         modal.style.display = 'none'
     }
 }
+
+
+/* botones de categor√≠a */
+
+function toggleActive(element) {
+    var buttons = document.querySelectorAll('.category'); 
+    buttons.forEach(function(btn) {
+        btn.classList.remove('active');
+    });
+    element.classList.add('active');
+}
