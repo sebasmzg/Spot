@@ -5,14 +5,23 @@
 }
 
 #navBar{
-  width: 35%;
-  height: 10px;
+  height: 1000px;
   background-color: black;
+}
+
+.navBarWidthMore{
+  transition: width 0.5s;
+  width: 20%;
+}
+
+.navBarWidthLess{
+  transition: width 0.5s;
+  width: 10%;
 }
 
 .navigation {
   position: fixed;
-  inset: 20px 0 20px 20px;
+  inset: 20px 0 20px 10px;
   width: 75px;
   background: #b1b1b1;
   transition: 0.5s;
