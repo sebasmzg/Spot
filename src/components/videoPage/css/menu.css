@@ -4,18 +4,29 @@
   box-sizing: border-box;
 }
 
+body{
+  height: 100%;
+  margin: 0;
+  overflow: hidden;
+}
+
+.hidden{
+  display: none;
+}
+
 #navBar{
-  height: 1000px;
+  float: left;
+  height: 100vh;
   background-color: black;
 }
 
 .navBarWidthMore{
-  transition: width 0.5s;
+  transition: 0.5s;
   width: 20%;
 }
 
 .navBarWidthLess{
-  transition: width 0.5s;
+  transition: 0.5s;
   width: 10%;
 }
 
@@ -31,12 +42,13 @@
   border-radius: 15px;
   z-index: 1000;
 }
+
 .navigation .menuToggle {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
-  height: 60px;
+  height: 70px;
   border-bottom: 1px solid #3d4152;
   cursor: pointer;
   display: flex;
@@ -44,6 +56,35 @@
   justify-content: flex-start;
   padding: 0 23px;
 }
+
+.logoZone{
+  position: absolute;
+  top: 0;
+}
+
+.logo{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 5px;
+  transition: 0.5s;
+}
+
+.imagLogo{
+  width: 55px;
+  height: 55px;
+  background-image: url(../../../assets/img/logo.png);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-size: cover;
+}
+
+.logo h1{
+  font-size: 32px;
+  margin: auto;
+}
+
 .navigation .menuToggle::before {
   content: "";
   position: absolute;
@@ -63,7 +104,8 @@
   transform: translateY(8px);
   transition: 0.5s;
   box-shadow: 0 -8px 0 #333;
-}
+} 
+
 .navigation ul {
   display: flex;
   flex-direction: column;
@@ -73,7 +115,7 @@
 }
 .navigation ul li {
   list-style: none;
-  position: relative;
+  /* position: relative; */
   width: 100%;
   height: 60px;
   padding: 0 10px;
@@ -153,4 +195,10 @@
 .navigation.open ul li a .text {
   opacity: 1;
   visibility: visible;
+}
+
+.profile{
+  position: absolute;
+  bottom: 0;
+  margin-bottom: 50px;
 }

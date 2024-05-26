@@ -3,79 +3,71 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/menu.css">
+    <title>Videos</title>
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous"> -->
     <link rel="icon" href="../../assets/img/logo.png">
+    <link rel="stylesheet" href="css/menu.css">
+    <link rel="stylesheet" href="css/videos.css">
 </head>
 <body>
     <section id="navBar">
-        <div class="map-container">
-            <div id="map">
-                <div class="navigation">
-                    <div class="menuToggle"></div>
-                    <ul>
-                        <li class="list active" style="--clr: #f44336;">
-                            <a href="#">
-                                <span class="icon"><ion-icon name ="map-outline"></ion-icon></span>
-                                <span class="text">Map</span>
-                            </a>
-                        </li>
-                        <li class="list" style="--clr: #2196f3;">
-                            <a href="#">
-                                <span class="icon"><ion-icon name ="albums-outline"></ion-icon></span>
-                                <span class="text">Discover</span>
-                            </a>
-                        </li>
-                        <li class="list" style="--clr: #e417ff;">
-                            <a href="#">
-                                <span class="icon"><ion-icon name ="search-outline"></ion-icon></span>
-                                <span class="text">Search</span>
-                            </a>
-                        </li>
-                        <li class="list" style="--clr: #ffa117;">
-                            <a href="#">
-                                <span class="icon"><ion-icon name ="person-outline"></ion-icon></span>
-                                <span class="text">Profile</span>
-                            </a>
-                        </li>
-                    </ul>
+        <div class="navigation">
+            <div class="menuToggle"></div>
+            <div class="logoZone hidden">
+                <div class="logo">
+                    <div class="imagLogo"></div>
+                    <h1>Spot</h1>
                 </div>
-                <div id="myModal" class="modal">
-                    <div class="modal-content">
-                        <span class="close">&times;</span>
-                        <div id="modal-info"></div>
-                        <button id="startRouting">Cómo llegar</button>
-                    </div>
-                </div>
-                <div id="myModal2" class="modal">
-                    <div class="modal-content">
-                        <div id="modal-info">
-                            <p id="distance"></p>
-                        </div>
-                        <button id="stopRouting">Detener recorrido</button>
-                    </div>
-                </div>
-                <!-- <div class="btn-group pre-scrollable" role="group" id="categories">
-                    <button type="button" class="btn btn-secondary">1</button>
-                    <button type="button" class="btn btn-secondary">2</button>
-                    <button type="button" class="btn btn-secondary">3</button>
-                    <button type="button" class="btn btn-secondary">4</button>
-                </div> -->
             </div>
+
+
+            <ul>
+                <li class="list active" style="--clr: #f44336;">
+                    <a href="#">
+                        <span class="icon"><ion-icon name ="map-outline"></ion-icon></span>
+                        <span class="text">Map</span>
+                    </a>
+                </li>
+                <li class="list" style="--clr: #2196f3;">
+                    <a href="#">
+                        <span class="icon"><ion-icon name ="albums-outline"></ion-icon></span>
+                        <span class="text">Discover</span>
+                    </a>
+                </li>
+                <li class="list" style="--clr: #e417ff;">
+                    <a href="#">
+                        <span class="icon"><ion-icon name ="search-outline"></ion-icon></span>
+                        <span class="text">Search</span>
+                    </a>
+                </li>
+                <li class="profile list" style="--clr: #ffa117;">
+                    <a href="#">
+                        <span class="icon"><ion-icon name ="person-outline"></ion-icon></span>
+                        <span class="text">Profile</span>
+                    </a>
+                </li>
+            </ul>
         </div>
-    </div>
     </section>
+
+    <main>
+        <section id="videoZone">
+            <article id="videos">
+                <div class="infoVideo">
+                    <div class="profileVideo">
+                        <a href=""><strong>Suares de los alpez</strong></a>
+                    </div>
+                    <div class="description"><p>Es un gran lugar, yo se que te encantaria visitarlo</p></div>
+                </div>
+            </article>
     
-    <section id="zoneVideo">
-        <article id="videos">
-            
-        </article>
-
-        <article id="interactions">
-
-        </article>
-    </section>
+            <article id="interests">
+                <div class="like">
+                    <ion-icon name="heart-outline" class="iconInterests"></ion-icon>
+                </div>
+            </article>
+        </section>
+    </main>
 
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
