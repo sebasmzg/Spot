@@ -84,6 +84,11 @@ function createPoint(lat, lng, icon, card){
 
                 var modal2 = document.getElementById('myModal2'); // obtiene el modal2
                 modal2.style.display = 'block'; // muestra el modal2
+                 // Calcular posición del modal
+                var pointPos = map.latLngToContainerPoint(point.getLatLng()); // convierte la ubicación del marcador en coordenadas de contenedor
+                modal2.style.left = (pointPos.x - modal2.offsetWidth / 2) + 'px'; // establece la posición horizontal del modal
+                modal2.style.top = (pointPos.y - modal2.offsetHeight) + 'px';// establece la posición vertical del modal
+
                 
             } else {
                 alert("Ubicación del usuario no encontrada.");
@@ -101,7 +106,7 @@ function createPoint(lat, lng, icon, card){
             span2.onclick = function() { // Añadir evento al segundo span
             control.setWaypoints([]); // Detener el enrutamiento removiendo los puntos de ruta
             modal2.style.display = 'none'; // Ocultar el modal2
-};
+        };
 
         };
     });
