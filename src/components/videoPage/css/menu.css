@@ -4,25 +4,36 @@
   box-sizing: border-box;
 }
 
+/* body{
+  height: 100%;
+  margin: 0;
+  overflow: hidden;
+} */
+
+.hidden{
+  display: none;
+}
+
 #navBar{
-  height: 1000px;
+  float: left;
+  height: 100vh;
   background-color: black;
 }
 
 .navBarWidthMore{
-  transition: width 0.5s;
   width: 20%;
+  transition: 0.5s;
 }
 
 .navBarWidthLess{
-  transition: width 0.5s;
+  transition: 0.5s;
   width: 10%;
 }
 
 .navigation {
   position: fixed;
-  inset: 20px 0 20px 10px;
-  width: 75px;
+  inset: 20px 0 20px 2%;
+  width: 70px;
   background: #b1b1b1;
   transition: 0.5s;
   display: flex;
@@ -31,19 +42,49 @@
   border-radius: 15px;
   z-index: 1000;
 }
+
 .navigation .menuToggle {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
-  height: 60px;
+  height: 70px;
   border-bottom: 1px solid #3d4152;
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  padding: 0 23px;
+  padding-left: 20px;
 }
+
+.logoZone{
+  position: absolute;
+  top: 0;
+}
+
+.logo{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 5px;
+  transition: 0.5s;
+}
+
+.imagLogo{
+  width: 55px;
+  height: 55px;
+  background-image: url(../../../assets/img/logo.png);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-size: cover;
+}
+
+.logo h1{
+  font-size: 32px;
+  margin: auto;
+}
+
 .navigation .menuToggle::before {
   content: "";
   position: absolute;
@@ -63,19 +104,19 @@
   transform: translateY(8px);
   transition: 0.5s;
   box-shadow: 0 -8px 0 #333;
-}
+} 
+
 .navigation ul {
   display: flex;
   flex-direction: column;
-  gap: 50px;
+  gap: 30px;
   width: 100%;
   justify-content: space-evenly;
 }
 .navigation ul li {
   list-style: none;
-  position: relative;
+  /* position: relative; */
   width: 100%;
-  height: 60px;
   padding: 0 10px;
   transition: 0.5s;
 }
@@ -101,7 +142,7 @@
   justify-content: flex-start;
   text-align: center;
   text-decoration: none;
-  font-size: 1.8em;
+  font-size: 30px;
 }
 .navigation ul li a .icon {
   position: relative;
@@ -111,13 +152,13 @@
   line-height: 60px;
   transition: 0.5s;
   border-radius: 10px;
-  font-size: 1.75em;
+  font-size: 55px;
   color: #222;
 }
 .navigation ul li a .icon::before {
   content: "";
   position: absolute;
-  top: 10px;
+  top: 5px;
   left: 0;
   width: 100%;
   height: 100%;
@@ -134,14 +175,17 @@
   align-items: center;
   color: #333;
   opacity: 0;
+  height: 0;
+  overflow: hidden;
   visibility: hidden;
-  transition: 0.5s;
+  transition: all 0.5s;
 }
 .navigation.open .menuToggle::before {
   transform: translateY(0px) rotate(45deg);
 }
 .navigation.open {
-  width: 250px;
+  width: 17%;
+  overflow: hidden;
 }
 .navigation.open .menuToggle::after {
   transform: translateY(0px) rotate(-45deg);
@@ -151,6 +195,33 @@
   transform: translateX(10px);
 }
 .navigation.open ul li a .text {
-  opacity: 1;
   visibility: visible;
+  height: auto;
+  opacity: 1;
+  transition: all 1s;
+}
+
+.profile{
+  position: absolute;
+  bottom: 0;
+  margin-bottom: 50px;
+}
+
+
+@media only screen and (max-width: 900px){
+  body{
+    background-color: rgb(55, 0, 255);
+  }
+
+  .navigation ul li a{
+    flex-direction: column-reverse;
+  }
+  .logoZone{
+    margin-left: 40px;
+
+  }
+
+  .logo h1{
+    display: none;
+  }
 }

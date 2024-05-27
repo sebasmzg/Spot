@@ -12,109 +12,16 @@ body{
 
 /*codigo para la zona aside de navegacion y configuracion de botones*/
 .aside{
-    width: 15%;
+    width: 27%;
     height: inherit;
-    /* background-color: aquamarine; */
-    display: flex;
-    flex-direction: column;
     float: left;
-    border: 1px solid black;
-    border-radius: 1%;
-}
-.aside-logo {
-    width: auto;
-    height: 25%;
-    /* background-color: blue; */
-    display: flex;
-    justify-items: center;
-    padding: 10%;
-}
-.aside-logo img{
-    width: 35px;
-    height: 35px;
-}
-
-.h2-aside{
-    font-size: 18px;
-    margin: auto;
-}
-
-.aside-logo h2{
-
-}
-.aside-buttoms {
-    width: auto;
-    height: 50%;
-    /* background-color: blueviolet; */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 10%;
-}
-
-.aside-buttom-0 {
-    display: flex;
-    text-decoration: none;
-    color: black;
-}
-.aside-buttom-0 img{
-    width: 35px;
-    height: 35px;
-}
-.aside-buttom-0 h2{
-    padding: 5px 0px 0px 5px;}
-
-.aside-buttom-1 {
-    display: flex;
-    text-decoration: none;
-    color: black;
-    margin: 15px 0px 15px 0px;
-}
-.aside-buttom-1 img{
-    width: 35px;
-    height: 35px;
-}
-.aside-buttom-1 h2{
-    padding: 5px 0px 0px 5px;
-}
-
-.aside-buttom-2 {
-    display: flex;
-    text-decoration: none;
-    color: black;
-}
-.aside-buttom-2 img{
-    width: 35px;
-    height: 35px;
-}
-.aside-buttom-2 h2{
-    padding: 5px 0px 0px 5px;
-}
-
-.aside-footer {
-    width: auto;
-    height: 25%;
-    /* background-color: rgba(0, 0, 0, 0.459); */
-}
-.aside-buttom-footer {
-    display: flex;
-    text-decoration: none;
-    color: black;
-    padding: 10%;
-    margin: 65% 0% 0% 0%;
-}
-.aside-buttom-footer img{
-    width: 35px;
-    height: 35px;
-}
-.aside-buttom-footer h2{
-    padding: 5px 0px 0px 5px;
 }
 
 main{
     display: flex;
     width: 100%;
     flex-direction: column;
+    padding: 1%;
 }
 
 .main-article {
@@ -134,10 +41,11 @@ main{
 
 }
 .main-article-1 img{
-    width: 35%;
-    height:70%;
+    width: 50%;
+    height:100%;
     margin: auto;
 }
+
 .main-article-1 h2{
     margin: auto;
 }
@@ -158,6 +66,16 @@ main{
     float: left;
     margin: 11% 0% 0% 0%;
     border-radius: 10px;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 130%;
+    font-weight: 900;
+    color:  white;
+    background-color: rgba(0, 0, 0, 0.822);
+}
+.main-buttom:hover,
+.main-buttom2:hover{
+    background-color: rgba(0, 0, 0, 0.199);
+
 }
 
 .main-span {
@@ -172,7 +90,7 @@ main{
     width: 100%;
     height: 10%;
     /* background-color: rgba(137, 43, 226, 0.466); */
-    border-bottom: 1px solid black;
+    /* border-bottom: 1px solid black; */
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -184,39 +102,56 @@ main{
     height: 30px;
 }
 
+.mid-buttom-0,
+.mid-buttom-1,
+.mid-buttom-2{
+    width: 50px;
+    height: 50px;
+    border: 2px solid rgba(252, 252, 252, 0.658);
+    color: #fff;
+    background: #11111100;
+    position: relative;
+    border-radius: 10px;}
+
+.mid-buttom-0:active,
+.mid-buttom-1:active,
+.mid-buttom-2:active{
+    background-color: rgb(0, 153, 255);
+}
+
+
 /*Contenedor del grid*/
 .grid-zone {
     width: 100%;
     height: 60%;
-    background-color: rgba(0, 0, 255, 0.301);
+    background-color: rgba(0, 0, 255, 0.014);
     overflow: auto;
+    border-radius: 1%;
 }
 
 /* Zone coments */
 
-#comentarios{
-    display: flex;
-    padding: 3%;
-    
-}
-
 .zona-comentarios{
-    background-color: rgba(0, 0, 0, 0.979);
+    background-color: rgba(0, 0, 0, 0.034);
     width: 100%;
     height: 400px;
     overflow: auto;
 }
 
-
+/* fin zona comentarios */
 #Map{
-    display: flex;
-    padding: 3%;
-
+    width: 100%;
+    height: 100%;
+    background-color: aqua;
+    align-content: center;
 }
-.map-zone{
+#map1{
+    width: 90%;
+    height: 90%;
+    padding: 1% 1% 1% 1%;
+    display: flex;
+    flex-direction: column;
     background-color: black;
-    width: 1000px;
-    height: 400px;
     margin: auto;
 }
 
@@ -227,46 +162,31 @@ main{
     grid-template-rows: 250px 250px;
     grid-template-columns: 300px 300px 300px;
 
-    gap: 30px;
-    margin: 7%;
+
+    gap: 0.5%;
+    margin: 1% 1% 1% 1.5%;
 }
-.item-0 {
-    grid-row: 150px;
-    grid-column: 150px;
-    background-color: aqua;
-    border-radius: 1%;
-}
-.item-1 {
-    grid-row: 150px;
-    grid-column: 150px;
-    background-color: aqua;
-    border-radius: 1%;
-}
-.item-2 {
-    grid-row: 150px;
-    grid-column: 150px;
-    background-color: aqua;
-    border-radius: 1%;
-}
-.item-3 {
-    grid-row: 150px;
-    grid-column: 150px;
-    background-color: aqua;
-    border-radius: 1%;
-}
-.item-4 {
-    grid-row: 150px;
-    grid-column: 150px;
-    background-color: aqua;
-    border-radius: 1%;
-}
+.item-0,
+.item-1,
+.item-2,
+.item-3,
+.item-4,
 .item-5 {
     grid-row: 150px;
     grid-column: 150px;
-    background-color: aqua;
+    background-color: rgb(1, 20, 20);
     border-radius: 1%;
+
 }
 
+.item-0:hover,
+.item-1:hover,
+.item-2:hover,
+.item-3:hover,
+.item-4:hover,
+.item-5:hover{
+    background-color: rgba(0, 0, 0, 0.596);
+}
 
 #gridZone,
 #comentarios,
