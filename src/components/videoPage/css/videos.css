@@ -2,6 +2,7 @@ body{
     height: 100%;
     margin: 0;
     overflow: hidden;
+    background-color: #bdb3b0;
 }
 
 a{
@@ -21,10 +22,6 @@ a{
     border-radius: 20px;
     width: 500px;
     height: 90%;
-    background-image: url(../../../assets/img/1065341338_018e9920a8_b1.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-size: 100% 100%;
 }
 
 .infoVideo{
@@ -36,9 +33,9 @@ a{
 }
 
 .zoneInfo{
-    border-radius: 20px;
+    border-radius: 0 0 20px 20px;
     height: 15%;
-    background-color: rgba(48, 48, 48, 0.705);
+    background-color: rgba(48, 48, 48, 0.301);
     display: flex;
     flex-direction: column;
     text-align: left;
@@ -52,7 +49,7 @@ a{
 }
 
 .profileVideo a{
-    width: 40%;
+    width: 60%;
     flex-wrap: wrap;
     display: flex;
     align-items: center;
@@ -92,14 +89,11 @@ a{
     margin: 10px;
 }
 
-.iconInterests{
-    width: 50px;
-    height: 50px;
-    transition: width 0.3s, heigth 0.3s;
+.like svg{
+    transition: width 0.3s, heigth 0.3s, color 0.2s;
 }
 
-.iconInterests:hover{
-    width: 60px;
-    height: 60px;
-    color: red;
+.likeButton{
+    border: none;
+    background: none;
 }

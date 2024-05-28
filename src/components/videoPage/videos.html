@@ -8,20 +8,28 @@
     <link rel="icon" href="../../assets/img/logo.png">
     <link rel="stylesheet" href="css/menu.css">
     <link rel="stylesheet" href="css/videos.css">
+    <link rel="stylesheet" href="css/contentVideo.css">
 </head>
 <body>
     <section id="navBar">
         <div class="navigation">
             <div class="menuToggle"></div>
-            <div class="logoZone hidden">
+            <!-- <div class="logoZone hidden">
                 <div class="logo">
                     <div class="imagLogo"></div>
                     <h1>Spot</h1>
                 </div>
-            </div>
+            </div> -->
 
 
             <ul>
+                <li class="logo">
+                    <a href="#">
+                        <span class="icon imagLogo"></span>
+                        <span class="text">Spot</span>
+                    </a>
+                </li>
+
                 <li class="list" style="--clr: #f44336;">
                     <a href="#">
                         <span class="icon"><ion-icon name ="map-outline"></ion-icon></span>
@@ -53,22 +61,75 @@
     <main>
         <section id="videoZone">
             <article id="videos">
-                <div class="infoVideo">
-                    <div class="zoneInfo">
-                        <div class="profileVideo">
-                            <a href="">
-                                <div class="imgProfile"></div>
-                                <strong>Suares de los alpez</strong>
-                            </a>
+                <div class="content" id="content1">
+                    <div class="infoVideo">
+                        <div class="zoneInfo">
+                            <div class="profileVideo">
+                                <a href="../profile/profile.html">
+                                    <div class="imgProfile"></div>
+                                    <strong>Suares de los alpez</strong>
+                                </a>
+                            </div>
+                            <div class="description"><p>Es un gran lugar, yo se que te encantaria visitarlo</p>
+                            </div>
                         </div>
-                        <div class="description"><p>Es un gran lugar, yo se que te encantaria visitarlo</p></div>
+                    </div>
+                </div>
+                
+                <div class="content" id="content3">
+                    <div class="infoVideo">
+                        <div class="zoneInfo">
+                            <div class="profileVideo">
+                                <a href="../profile/profile.html">
+                                    <div class="imgProfile"></div>
+                                    <strong>Suares de los alpez</strong>
+                                </a>
+                            </div>
+                            <div class="description"><p>Es un gran lugar, yo se que te encantaria visitarlo</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="content" id="content3">
+                    <div class="infoVideo">
+                        <div class="zoneInfo">
+                            <div class="profileVideo">
+                                <a href="../profile/profile.html">
+                                    <div class="imgProfile"></div>
+                                    <strong>Suares de los alpez</strong>
+                                </a>
+                            </div>
+                            <div class="description"><p>Es un gran lugar, yo se que te encantaria visitarlo</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="content" id="content3">
+                    <div class="infoVideo">
+                        <div class="zoneInfo">
+                            <div class="profileVideo">
+                                <a href="../profile/profile.html">
+                                    <div class="imgProfile"></div>
+                                    <strong>Suares de los alpez</strong>
+                                </a>
+                            </div>
+                            <div class="description"><p>Es un gran lugar, yo se que te encantaria visitarlo</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </article>
-    
+
             <article id="interests">
                 <div class="like">
-                    <ion-icon name="heart-outline" class="iconInterests"></ion-icon>
+                    <!-- <ion-icon name="heart-outline" class="iconInterests"></ion-icon> -->
+                    <button type="button" class="likeButton" onclick="clickLike()">
+                        <svg class="svgInteration" xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-heart-fill" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314"/>
+                          </svg>
+                    </button>
                 </div>
             </article>
         </section>
@@ -78,6 +139,7 @@
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
     <script type="module" src="js/menu.js"></script>
     <script src="js/videos.js"></script>
+    <script src="js/contentVideo.js"></script>
     <!-- <script type="module" src="../../../menu.js"></script> -->
 </body>
 </html>
