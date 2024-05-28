@@ -1,25 +1,63 @@
-let seApreto = false;
-let svg = document.querySelector(".svgInteration");
+let content = document.querySelectorAll(".content");
+let indexCounter = 0;
+// let isScrolling = false;
 
-function svgSize() {  
-    svg.style.width = "40px";
-    svg.style.heigth = "40px";
+function videos(index) {
+    if(index >= 0 && index < content.length){
+        const translateYValue = `translateY(-${index * 100}%)`;
+        content.forEach((contentItem, i) =>{
+            if(index == i){
+                contentItem.style.transform = 'translateY(0%)';
+            }
+            /* else if (i < index) {
+                contentItem.style.transform = 'translateY(-100%)';
+            }  */
+            else {
+                contentItem.style.transform = `translateY(100%)`;
+            }
+            contentItem.style.transform = translateYValue;
+        })
+        indexCounter = index;
+        /* setTimeout(() => {
+            isScrolling = false;
+        }, 5); */
+    }
 }
 
-svgSize();
+videos(indexCounter);
 
-function clickLike() {
-    let likeButton = document.querySelector(".likeButton");
 
-    if(!seApreto){
-        likeButton.style.color = "red";
-        seApreto = true;
-        svg.style.width = "45px";
-        svg.style.heigth = "45px";
+window.addEventListener('wheel', (event) => {
+    if (event.deltaY > 0) {
+        videos(indexCounter + 1);
+    } 
+    else {
+        videos(indexCounter - 1);
     }
-    else{
-        likeButton.style.color = "black";
-        seApreto = false;
-        svgSize();   
+});
+
+
+window.addEventListener('keydown', (event) => {
+    if (event.key === 'ArrowUp' && indexCounter > 0) {
+        videos(indexCounter - 1);
+    } else if (event.key === 'ArrowDown' && indexCounter < content.length - 1) {
+        videos(indexCounter + 1);
     }
-}
+});
+
+let touchStartY = 0;
+let touchEndY = 0;
+
+window.addEventListener('touchstart', (event) => {
+    touchStartY = event.touches[0].clientY;
+    console.log("hola");
+});
+
+window.addEventListener('touchend', (event) => {
+    touchEndY = event.changedTouches[0].clientY;
+    if (touchStartY - touchEndY > 50){
+        videos(indexCounter + 1);
+    } else if (touchEndY - touchStartY > 50) {
+        videos(indexCounter - 1);
+    }
+});

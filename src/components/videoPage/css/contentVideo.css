@@ -8,22 +8,95 @@
 
 .content {
     width: auto;
-    height: calc(100% - 20px);
+    height: 100%;
     background-image: url(../../../assets/img/1065341338_018e9920a8_b1.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-size: 100% 100%;
-    /* display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: end;
-    background-color: #00000060;
-    color: #fff; */
+    display: flex;
+    align-items: center;
     transition: transform 0.5s ease;
-    border-radius: 20px;
+    /* border-radius: 20px; */
     /* position: absolute; */
 }
 
-.separate{
-    margin-bottom: 20px;
+.infoVideo{
+    width: 100%;
+    background-color: rgba(128, 128, 128, 0.699);
+    height: 20%;
+    position: absolute;
+    bottom: 0;
+    color: rgb(255, 255, 255);
+}
+
+.zoneInfo{
+    height: 15%;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.profileVideo{
+    width: 100%;
+    background-color: aqua;
+    height: 25%;
+    margin-bottom: 40px;
+    padding-left: 4%;
+}
+
+.profileVideo a{
+    width: 60%;
+    flex-wrap: wrap;
+    display: flex;
+    align-items: center;
+    color: rgb(255, 255, 255);
+}
+
+.imgProfile{
+    background-color: white;
+    width: 35px;
+    height: 35px;
+    background-image: url(../../../assets/img/logo.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-size: cover;
+    margin-right: 5px;
+    border-radius: 50%;
+}
+
+.profileVideo a strong{
+    font-size: 18px;
+}
+
+
+.description{
+    /* align-self: flex-start; */
+    flex-wrap: wrap;
+    height: 40%;
+    margin-bottom: 15px;
+    padding-left: 55px;
+    font-size: 17px;
+}
+
+.interests{
+    position: absolute;
+    right: 0;
+    background-color: aqua;
+}
+.likeButton{
+    position: absolute;
+    left: 10px;
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+ 
+.svgInteration{
+    width: 40px;
+    height: 40px;
+    transition: width 0.3s, heigth 0.3s, color 0.2s;
+}
+
+.colorRed{
+    color: red;
 }
