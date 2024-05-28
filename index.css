@@ -197,9 +197,9 @@
     font-weight: bold;
 }
 
-.close:hover,
-.close:focus {
-    color: black;
+.close-Search:hover,
+.close-Search:focus {
+    color: rgb(51, 51, 51);
     text-decoration: none;
     cursor: pointer;
 }
