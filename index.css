@@ -92,3 +92,114 @@
     background-color: #4CAF50; /* Color de fondo para el botón activo */
     color: white; /* Color del texto para el botón activo */
 }
+
+
+
+
+/* Estilos específicos del contenedor de búsqueda */
+.buscar-contenedor {
+    background-color: #fff;
+    width: 300px;
+    border-radius: 30px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+}
+
+.buscar-contenedor h2 {
+    margin-top: 0;
+    font-size: 18px;
+    color: #333;
+}
+
+.buscar-contenedor input {
+    width: 93%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+}
+
+.reciente {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.reciente span {
+    color: #007bff;
+    cursor: pointer;
+}
+
+.lugar-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    cursor: pointer;
+}
+
+.lugar-item img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.lugar-item div {
+    flex-grow: 1;
+}
+
+.lugar-item div p {
+    margin: 0;
+    font-size: 14px;
+    color: #333;
+}
+
+.lugar-item div span {
+    font-size: 12px;
+    color: #999;
+}
+
+.lugar-item .eliminar {
+    color: #999;
+    cursor: pointer;
+}
+
+/* Estilos para el modal */
+.modalSearch {
+    display: none; /* Oculto por defecto */
+    position: fixed; /* Fijo en la pantalla */
+    z-index: 1000; /* Asegúrate de que sea alto para estar por encima de otros elementos */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto; /* Permitir desplazamiento si es necesario */
+    background-color: rgba(0, 0, 0, 0.4); /* Color de fondo con opacidad */
+}
+
+.modal-content-Search {
+    margin: 10px auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 100%; /* Podrías ajustar esto según tus necesidades */
+    max-width: 500px; /* Máximo ancho para el contenido del modal */
+    border-radius: 10px; /* Bordes redondeados */
+    z-index: 1001; /* Asegúrate de que esté por encima del modal */
+    display: flex;
+    justify-content: center;
+}
+
+.close-Search {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
