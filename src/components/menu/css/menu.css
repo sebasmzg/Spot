@@ -52,7 +52,7 @@
   .navigation ul {
     display: flex;
     flex-direction: column;
-    gap: 50px;
+    gap: 30px;
     width: 100%;
     justify-content: space-evenly;
   }
@@ -64,18 +64,18 @@
     padding: 0 10px;
     transition: 0.5s;
   }
-  .navigation ul li.active {
+  .navigation ul li:hover {
     transform: translateX(30px);
     border-radius: 15px;
   }
-  .navigation ul li.active a .icon {
+  .navigation ul li:hover a .icon {
     color: #ffffff;
     background: var(--clr);
   }
-  .navigation ul li.active a .icon::before {
+  .navigation ul li:hover a .icon::before {
     opacity: 0.5;
   }
-  .navigation ul li.active a .text {
+  .navigation ul li:hover a .text {
     color: var(--clr);
     
   }
@@ -132,7 +132,7 @@
     transform: translateY(0px) rotate(-45deg);
     box-shadow: 0 0 0 #333;
   }
-  .navigation.open ul li.active {
+  .navigation.open ul li:hover {
     transform: translateX(10px);
   }
   .navigation.open ul li a .text {
