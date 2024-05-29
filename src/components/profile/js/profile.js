@@ -7,11 +7,20 @@ const map = document.getElementById("Map");
 const mainButtom1 = document.getElementById("main-buttom");
 const mainButtom2 = document.getElementById("main-buttom2");
 
+mainButtom1.addEventListener("click",() =>{
+    mainButtom2.classList.toggle("show");
+    mainButtom1.classList.toggle("hidden");
+})
 
-mainButtom1.onclick = function(){
-    mainButtom1.style.display = "none";
-    mainButtom2.style.display = "block";
-}
+mainButtom2.addEventListener("click",() =>{
+    mainButtom1.classList.toggle("hidden");
+    mainButtom2.classList.toggle("show");
+})
+
+// mainButtom1.onclick = function(){ 
+//     mainButtom1.style.display = "none";
+//     mainButtom2.style.display = "block";
+// }
 
 midButtom0.onclick = function(){
     grid.style.display = "block";
@@ -30,6 +39,33 @@ midButtom2.onclick = function(){
     Zcomen.style.display = "none";
     grid.style.display = "none";
 }
+
+
+// codigo zona de comentarios
+
+const submitButton = document.getElementById("submit-button");
+const commentInput = document.getElementById("comment-input");
+const commentsContainer = document.getElementById("comment-container");
+const fecha = "99,99,9999";
+
+submitButton.addEventListener("click", function() {
+  const comment = commentInput.value;
+  const commentElement = document.createElement("div");
+  const commentElement1 = document.createElement("div");
+  const commentElement2 = document.createElement("div");
+
+
+  commentElement.classList.add("ctn-comments");
+  commentElement1.classList.add("ctn-comments1");
+  commentElement2.classList.add("ctn-comments2");
+  commentElement2.innerHTML = comment;
+  commentElement.appendChild(commentElement1);
+  commentElement.appendChild(commentElement2);
+  commentsContainer.appendChild(commentElement);
+  commentInput.value = "";
+});
+
+// fin codigo zona de comentarios
 
 // codigo js de zona mapa
 
@@ -73,3 +109,6 @@ map2.on('locationerror', function(e) { //muestra un mensaje si no se puede acced
 });
 
 locateControl.start(); // Inicia la localización del usuario
+
+
+
