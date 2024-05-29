@@ -198,7 +198,18 @@ a{
 
 
 /* icono password */
+.position-relative {
+    position: relative;
+}
 
+.toggle-button{
+    position: absolute;
+    right: 0;
+    top: 8px;
+    align-items: center;
+    margin: 5px;
+
+}
 .eye-icon {
     right: 15px;
 }

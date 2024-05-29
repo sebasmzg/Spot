@@ -10,9 +10,11 @@ signUp.addEventListener('submit',(e)=>{ // Evento submit del formulario
     const userName = document.querySelector('#userName').value;
     const password = document.querySelector('#password').value;
 
+    console.log(`Email: ${email}, Nombre: ${name}, userName: ${userName}, Contraseña: ${password}`);
+
     const users = JSON.parse(localStorage.getItem('users')) || []; // Obtiene los usuarios del localStorage
-    const isUserRegistred = users.find(user => user.email === email); // Busca si el usuario ya está registrado con ese email
-    const isUserNameRegistred = users.find(user => user.userName === userName); // Busca si el usuario ya está registrado con ese nombre de usuario
+    const isUserRegistred = users.some(user => user.email === email); // Busca si el usuario ya está registrado con ese email
+    const isUserNameRegistred = users.some(user => user.userName === userName); // Busca si el usuario ya está registrado con ese nombre de usuario
 
     if (isUserRegistred) { // Si el usuario ya está registrado
         return alert('El email ya se encuentra registrado');
