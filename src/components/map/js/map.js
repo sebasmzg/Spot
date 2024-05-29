@@ -46,9 +46,6 @@ var pointIcon = L.Icon.extend({ //crea una clase de iconos //.EXTEND() es una fu
     }
 });
 
-var greenIcon = new pointIcon({iconUrl: './src/assets/img/leaf-green.png'});
-var redIcon = new pointIcon({iconUrl: './src/assets/img/leaf-red.png'});
-var orangeIcon = new pointIcon({iconUrl: './src/assets/img/leaf-orange.png'});
 var logoIcon = new pointIcon({iconUrl: './src/assets/img/logo.png'});
 //crea varios iconos a partir de la clase LeafIcon
 

@@ -17,7 +17,6 @@
 #navBar{
   float: left;
   height: 100vh;
-  background-color: black;
 }
 
 .navBarWidthMore{
@@ -34,7 +33,7 @@
   position: fixed;
   inset: 20px 0 20px 2%;
   width: 70px;
-  background: #b1b1b1;
+  background: #ffffff;
   transition: 0.5s;
   display: flex;
   justify-content: center;
@@ -57,34 +56,33 @@
   padding-left: 20px;
 }
 
-.logoZone{
+/* .logoZone{
   position: absolute;
   top: 0;
-}
+  margin-left: 40px;
+} */
 
 .logo{
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 5px;
+  position: absolute;
+  top: 0;
+  margin-top: 80px;
   transition: 0.5s;
 }
 
 .imagLogo{
-  width: 55px;
-  height: 55px;
+  /* width: 50px;
+  height: 50px; */
   background-image: url(../../../assets/img/logo.png);
   background-repeat: no-repeat;
   background-size: 100% 100%;
   background-size: cover;
 }
 
-.logo h1{
+/* .logo h1{
   font-size: 32px;
   margin: auto;
 }
-
+ */
 .navigation .menuToggle::before {
   content: "";
   position: absolute;
@@ -148,7 +146,7 @@
   position: relative;
   display: block;
   min-width: 55px;
-  height: 50px;
+  height: 55px;
   line-height: 60px;
   transition: 0.5s;
   border-radius: 10px;
@@ -184,7 +182,7 @@
   transform: translateY(0px) rotate(45deg);
 }
 .navigation.open {
-  width: 17%;
+  width: 15%;
   overflow: hidden;
 }
 .navigation.open .menuToggle::after {
@@ -204,24 +202,13 @@
 .profile{
   position: absolute;
   bottom: 0;
-  margin-bottom: 50px;
+  margin-bottom: 25px;
 }
 
 
-@media only screen and (max-width: 900px){
-  body{
-    background-color: rgb(55, 0, 255);
-  }
+@media only screen and (max-width: 1200px){
 
   .navigation ul li a{
     flex-direction: column-reverse;
-  }
-  .logoZone{
-    margin-left: 40px;
-
-  }
-
-  .logo h1{
-    display: none;
   }
 }

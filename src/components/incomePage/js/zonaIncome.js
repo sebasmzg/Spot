@@ -5,9 +5,26 @@ incomeZone.classList.add('hidden');
 /**Zone to open the income */
 const incomeButton = document.querySelector('#incomeButton')
 
+/* Info web site */
+const infoContainer = document.querySelector('#info-container');
+
+/* Back income btn */
+const backIncome = document.querySelector('#backIncome');
+
+
+
 incomeButton.addEventListener("click", () => {
     incomeZone.classList.remove('hidden');
+    /* ocultar container info */
+    infoContainer.classList.add('hidden');
+    /* ocultar botón */
+    incomeButton.classList.add('hidden');
 });
+
+backIncome.addEventListener("click", () => {
+    infoContainer.classList.remove('hidden');
+    incomeButton.classList.remove('hidden');
+})
 
 
 /*All of this is used to flow between login and registrate.*/
@@ -45,6 +62,7 @@ buttonSvg.addEventListener("click", () =>{
     if(income.classList.contains('hidden')){
         income.classList.remove("hidden");
         register.classList.add("hidden");
+        infoContainer.classList.remove('hidden');
         buttonLogIn.innerHTML = "Registrate";
         textLogIn.innerHTML = "¿Es tu primera vez en spot?";
         tightened = false;
