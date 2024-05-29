@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="css/menu.css">
     <link rel="stylesheet" href="css/videos.css">
     <link rel="stylesheet" href="css/contentVideo.css">
+    <link rel="stylesheet" href="css/upLoadVideos.css">
 </head>
 <body>
     <section id="navBar">
@@ -69,27 +70,16 @@
                     <video class="video" src="../../assets/videos/Cuanto cuesta visitar Guatape.mp4"loop>
                     </video>
                 </div>
-
-                <div class="content">
-                    <video class="video" src="../../assets/videos/Cuanto cuesta visitar Guatape.mp4"loop>
-                    </video>
-                </div>
-
-                <div class="content">
-                    <video class="video" src="../../assets/videos/Cuanto cuesta visitar Guatape.mp4"loop>
-                    </video>
-                </div>
-
-                <div class="interests">
-                    <div class="like">
-                        <button type="button" class="likeButton">
-                            <svg class="svgInteration" xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-heart-fill" viewBox="0 0 16 16">
-                                <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314"/>
-                              </svg>
-                        </button>
-                    </div>
-                </div>
             </article>
+
+
+            <section id="zoneUpLoadVideos">
+                <form action="" id="upLoadVideos">
+                    <input type="file" name="videoInput" id="videoInput" accept="upLoadVideos/*">
+
+                    <button type="submit">Enviar</button>
+                </form>
+            </section>
         </section>
     </main>
     
@@ -99,6 +89,7 @@
     <script type="module" src="js/menu.js"></script>
     <script type="module" src="js/videos.js"></script>
     <script type="module" src="js/contentVideo.js"></script>
+    <script type="module" src="js/upLoadVideos.js"></script>
     <!-- <script type="module" src="../../../menu.js"></script> -->
 </body>
 </html>
@@ -128,7 +119,7 @@
         <button type="button" class="likeButton">
             <svg class="svgInteration" xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-heart-fill" viewBox="0 0 16 16">
                 <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314"/>
-              </svg>
+            </svg>
         </button>
     </div>
 </div> -->

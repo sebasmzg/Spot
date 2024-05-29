@@ -1,0 +1,10 @@
+#zoneUpLoadVideos{
+    right: 0;
+    position: absolute;
+}
+
+#upLoadVideos{
+    display: flex;
+    flex-direction: column;
+    background-color: aqua;
+}

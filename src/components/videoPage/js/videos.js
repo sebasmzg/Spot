@@ -1,19 +1,19 @@
 import {hiddenPlay, repeatVideo} from "./contentVideo.js";
 
-let content = document.querySelectorAll(".content");
+export let content = document.querySelectorAll(".content");
 let indexCounter = 0;
 
-function createOverlayElements() {
-    for (let i = 0; i < content.length; i++) {
+export function createOverlayElements(contentVideos) {
+    for (let i = 0; i < contentVideos.length; i++) {
         const divPlay = document.createElement('div');
-    divPlay.classList.add('play', 'hidden');
+        divPlay.classList.add('play', 'hidden');
 
-    const svgNS = "http://www.w3.org/2000/svg";
-    const svg = document.createElementNS(svgNS, "svg");
+        const svgNS = "http://www.w3.org/2000/svg";
+        const svg = document.createElementNS(svgNS, "svg");
 
     svg.setAttribute("xmlns", "http://www.w3.org/2000/svg");
     svg.setAttribute("fill", "currentColor");
-    svg.setAttribute("viewBox", "0 0 16 16");
+    svg.setAttribute("viewBox", "0 0 16 16");   
 
     svg.classList.add("bi", "bi-play");
 
@@ -95,16 +95,32 @@ function createOverlayElements() {
     buttonLikes.appendChild(svgLikes);
 
     /** Añadir los elementos al contenedor */
-    content[i].appendChild(divPlay);
-    content[i].appendChild(infoVideoDiv);
-    content[i].appendChild(interests); 
+    contentVideos[i].appendChild(divPlay);
+    contentVideos[i].appendChild(infoVideoDiv);
+    contentVideos[i].appendChild(interests); 
     }
     
 }
+createOverlayElements(content);
 
-createOverlayElements();
-// let video = document.querySelectorAll("video");
-// let isScrolling = false;
+let likeButton = document.querySelectorAll(".likeButton");
+
+function clickLike() {
+    for (let i = 0; i < likeButton.length; i++) {
+        likeButton[i].addEventListener("click", () =>{
+            if(!likeButton[i].classList.contains('colorRed')){
+                likeButton[i].classList.add('colorRed');
+            }
+            else if(likeButton[i].classList.contains('colorRed')){
+                likeButton[i].classList.remove('colorRed');
+            }        
+        })
+    }
+
+}
+
+clickLike();
+
 
 function videos(index) {
     if(index >= 0 && index < content.length){

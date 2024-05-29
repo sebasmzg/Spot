@@ -1,6 +1,7 @@
-// import { indexCounter } from "./videos.js";
+// import { createOverlayElements } from "./videos";
 // let seApreto = false;
 
+// createOverlayElements()
 // let svg = document.querySelectorAll(".svgInteration");
 let likeButton = document.querySelectorAll(".likeButton");
 // console.log(svg);
