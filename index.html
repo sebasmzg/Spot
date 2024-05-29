@@ -32,6 +32,12 @@
                 <div class="navigation">
                     <div class="menuToggle"></div>
                     <ul>
+                        <li class="list">
+                            <a href="#">
+                                <img src="./src/assets/img/logo.png" alt="Logo Spot" class="icon">
+                                <span class="text">Spot</span>
+                            </a>
+                        </li>
                         <li class="list active" style="--clr: #f44336;">
                             <a href="index.html">
                                 <span class="icon"><ion-icon name ="map-outline"></ion-icon></span>
@@ -45,7 +51,7 @@
                             </a>
                         </li>
                         <li class="list" style="--clr: #e417ff;">
-                            <a href="#">
+                            <a href="#" id="openSearchModal">
                                 <span class="icon"><ion-icon name ="search-outline"></ion-icon></span>
                                 <span class="text">Search</span>
                             </a>
@@ -58,11 +64,81 @@
                         </li>
                     </ul>
                 </div>
+                <!-- MODALES -->
                 <div id="myModal" class="modal">
                     <div class="modal-content">
                         <span class="close">&times;</span>
                         <div id="modal-info"></div>
                         <button id="startRouting">Cómo llegar</button>
+                    </div>
+                </div>
+
+                <!-- Modal para la búsqueda -->
+                <div id="myModalSearch" class="modalSearch">
+                    <div class="modal-content-Search">
+                        <div class="buscar-contenedor">
+                            <span class="close-Search">&times;</span>
+                            <h2>Buscar</h2>
+                            <input type="text" placeholder="Buscar">
+                            <div class="reciente">
+                                <span>Visitas recientes</span>
+                                <span>Borrar todo</span>
+                            </div>
+
+                            <div class="lugar-item">
+                                <img src="/src/assets/img/museum.jpg" alt="Museo">
+                                <div>
+                                    <p>Museo El Castillo</p>
+                                    <span>Museo</span>
+                                </div>
+                                <span class="eliminar">✕</span>
+                            </div>
+
+                            <div class="lugar-item">
+                                <img src="/src/assets/img/park.jpg" alt="Parques Temáticos">
+                                <div>
+                                    <p>Aeroparque Juan Pablo II</p>
+                                    <span>Parques Temáticos</span>
+                                </div>
+                                <span class="eliminar">✕</span>
+                            </div>
+
+                            <div class="lugar-item">
+                                <img src="/src/assets/img/stadium.jpg" alt="Deportes">
+                                <div>
+                                    <p>Unidad Deportiva Atanasio Girardot</p>
+                                    <span>Deportes</span>
+                                </div>
+                                <span class="eliminar">✕</span>
+                            </div>
+
+                            <div class="lugar-item">
+                                <img src="/src/assets/img/music.jpg" alt="Musica">
+                                <div>
+                                    <p>La Pascasia</p>
+                                    <span>Música</span>
+                                </div>
+                                <span class="eliminar">✕</span>
+                            </div>
+
+                            <div class="lugar-item">
+                                <img src="/src/assets/img/teather.jpg" alt="Teatro">
+                                <div>
+                                    <p>Teatro Pablo Tobón</p>
+                                    <span>Teatro</span>
+                                </div>
+                                <span class="eliminar">✕</span>
+                            </div>
+
+                            <div class="lugar-item">
+                                <img src="/src/assets/img/13.jpg" alt="Tour Cultural">
+                                <div>
+                                    <p>Comuna 13</p>
+                                    <span>Tour Cultural</span>
+                                </div>
+                                <span class="eliminar">✕</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div id="myModal2" class="modal">
@@ -74,12 +150,19 @@
                     </div>
                 </div>
                 <div class="btn-group">
-                    <button type="button" class="category">Arte</button>
-                    <button type="button" class="category">Música</button>
-                    <button type="button" class="category">Literatura</button>
-                    <button type="button" class="category">Danza</button>
-                    <button type="button" class="category">Historia</button>
-                    <button type="button" class="category">Evento</button>
+                    <div class="category-container">
+                        <button type="button" class="category" onclick="toggleActive(this)">Música</button>
+                        <button type="button" class="category" onclick="toggleActive(this)">Arte</button>
+                        <button type="button" class="category" onclick="toggleActive(this)">Literatura</button>
+                        <button type="button" class="category" onclick="toggleActive(this)">Danza</button>
+                        <button type="button" class="category" onclick="toggleActive(this)">Historia</button>
+                        <button type="button" class="category" onclick="toggleActive(this)">Evento</button>
+                        <button type="button" class="category" onclick="toggleActive(this)">Deporte</button>
+                    </div>
+                </div>
+                <!-- logOut -->
+                <div class="logout">
+                    <button id="logout">Logout</button>
                 </div>
             </div>
         </div>
@@ -97,7 +180,12 @@
 
     <!--Script de la aplicación-->
     <script src="./src/components/map/js/map.js"></script>
-    <script type="module" src="menu.js"></script>
+    <script type="module" src="./src/components/menu/js/menu.js"></script>
+    <script src="./src/components/search/js/search.js"></script>
+    <script src="./src/components/incomePage/js/logout.js"></script>
+    <script src="./src/components/incomePage/js/zonaIncome.js"></script>
+    <script src="./index.js"></script>
+    <script src="./src/components/incomePage/js/logout.js"></script>
 
 </body>
 </html>

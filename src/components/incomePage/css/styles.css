@@ -1,10 +1,10 @@
 *{
     margin: 0;
+    padding: 0;
 }
 
 body{
     font-family: Arial, sans-serif;
-    background-color: rgb(168, 168, 168);
 }
 
 a{
@@ -46,13 +46,15 @@ a{
 /*income zone*/
 #incomeForm{
     position: fixed;
-    top: 55%;
+    top: 50%;
     left: 50%;
+    height: 90%;
     transform: translate(-50%,-50%);
     background-color: rgb(235, 235, 235);
     border: 1px solid black;
     border-radius: 20px;
     padding: 30px 100px 30px 100px;
+    margin: auto;
 
 }
 
@@ -102,11 +104,13 @@ a{
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin: auto;
 }
 
 .form{
     display: flex;
     flex-direction: column;
+    
 }
 
 .formIncome p{
@@ -115,8 +119,7 @@ a{
 }
 
 .itemForm{
-    margin-top: 20px;
-    font-size: 22px;
+    margin-top: 10px;
     border: 1px solid gray;
     border-radius: 10px;
     padding: 5px;
@@ -146,7 +149,7 @@ a{
 .logIn{
     display: flex;
     justify-content: center;
-    margin-top: 70px;
+    margin-top: 30px;
 }
 
 .logIn p{
@@ -191,4 +194,23 @@ a{
 .logoLogIn p{
     border-bottom: 1px dashed black;
     text-align: center;
+}
+
+
+/* icono password */
+.position-relative {
+    position: relative;
+}
+
+.toggle-button{
+    position: absolute;
+    right: 0;
+    top: 8px;
+    align-items: center;
+    margin: 5px;
+
+}
+
+.eye-icon {
+    right: 15px;
 }
