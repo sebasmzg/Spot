@@ -99,17 +99,27 @@
 
       <!-- Zona para el grid -->
 
-      <article class="grid-zone" id="grid-zone">
-        <section id="gridZone">
-          <div class="grid">
+      <section class="grid-zone" id="grid-zone">
+        <div id="gridZone">
+          <div class="zona-input">
+            <button type="button" class="open-modal" data-open="modal1">
+              Subir Archivos
+            </button>
+          </div>
+          <!-- <div class="grid">
             <div class="item-0"><div class="item-00"></div></div>
             <div class="item-1"><div class="item-01"></div></div>
             <div class="item-2"><div class="item-02"></div></div>
             <div class="item-3"><div class="item-03"></div></div>
             <div class="item-4"><div class="item-04"></div></div>
             <div class="item-5"><div class="item-05"></div></div>
+          </div> -->
+
+          <div class="grid-papa" id="grid-papa2">
+
+            
           </div>
-        </section>
+        </div>
         <!-- Zona de comentarios -->
 
         <section id="comentarios">
@@ -137,7 +147,26 @@
              <script src="./src/components/map/js/map.js"></script>
           </div>
         </section>
-      </article>
+      </section>
+
+      <!-- zona de modals -->
+      <div class="modal" id="modal1" data-animation="slideInOutLeft">
+        <div class="modal-dialog">
+          <header class="modal-header">
+            <button class="close-modal" aria-label="close modal" data-close>
+              ✕  
+            </button>
+          </header>
+          <section class="modal-content">
+            <p><strong>Press ✕, ESC, or click outside of the modal to close it</strong></p><br>  
+            <input type="file" name="file" id="file" class="inputfile" />
+
+            <!-- <input id="fileupload" type="video" name="fileupload" /> 
+  <button id="upload-button" onclick="uploadFile()"> Upload file </button> -->
+          </section>
+        </div>
+      </div>
+
       </main>
     <script src="../menu/js/menu.js"></script>
     <script src="js/profile.js" defer></script>
