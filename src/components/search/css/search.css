@@ -1,3 +1,82 @@
+<<<<<<< HEAD
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.search-container {
+    background-color: #fff;
+    width: 300px;
+    border-radius: 30px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+}
+
+.search-container h2 {
+    margin-top: 0;
+    font-size: 18px;
+    color: #333;
+}
+
+.search-container input {
+    width: 93%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+}
+
+.reciente {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.reciente span {
+    color: #007bff;
+    cursor: pointer;
+}
+
+.lugar-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    cursor: pointer;
+}
+
+.lugar-item img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.lugar-item div {
+    flex-grow: 1;
+}
+
+.lugar-item div p {
+    margin: 0;
+    font-size: 14px;
+    color: #333;
+}
+
+.lugar-item div span {
+    font-size: 12px;
+    color: #999;
+}
+
+.lugar-item .eliminar {
+    color: #999;
+    cursor: pointer;
+}
+=======
 body {
     font-family: Arial, sans-serif;
     background-color: #f0f0f0;
@@ -75,3 +154,4 @@ body {
     cursor: pointer;
 }
 
+>>>>>>> 2a0d079fb78f20fe4cef8526bc87072905a000ea

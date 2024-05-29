@@ -33,17 +33,26 @@
                     <h1>Spot</h1>
                 </div>
     
-                <div class="formIncome">
+                <div class="formIncome" id="loginForm">
                     <h2>Ingresa</h2>
                     <p>Ingresa tu usuario y contraseña</p>
                     <form action="" class="form">
                         <label for="userName"></label>
-                        <input type="text" placeholder="User name" name="user_name" id="name" class="itemForm" required>
+                        <input type="text" placeholder="Username" name="user_name" id="userNameLogin" class="itemForm" required autofocus>
                         
-                        <label for="password"></label>
-                        <input type="text" placeholder="Contraseña" name="password" id="password" class="itemForm" required>
+                        <label for="passwordLogin"></label>
+                        <div class="password-input position-relative">
+                            <input type="text" placeholder="Contraseña" name="password" id="passwordLogin" class="itemForm" required>
+                            <div class="toggle-button">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="position-absolute top-50 translate-middle-y eye-icon" width="25" height="25" viewBox="0 0 20 20" fill="currentColor">
+                                    <path d="M10 12a2 2 0 100-4 2 2 0 000 4z" />
+                                    <path fill-rule="evenodd" d="M.458 10C1.732 5.943 5.522 3 10 3s8.268 2.943 9.542 7c-1.274 4.057-5.064 7-9.542 7S1.732 14.057.458 10zM14 10a4 4 0 11-8 0 4 4 0 018 0z" clip-rule="evenodd" />
+                                </svg>
+                            </div>
+                            
+                        </div>
                         
-                        <button type="submit" class="signIn itemForm">Ingresar</button>
+                        <button type="submit" class="signIn itemForm" value="incio">Ingresar</button>
                     </form>
                 </div>
         
@@ -58,20 +67,20 @@
                 <div class="formIncome formLogIn">
                     <h2>Crea tu perfil</h2>
                     <p>Crea tu cuenta</p>
-                    <form action="" class="form">
+                    <form action="" class="form" id="signUp">
                         <label for="email"></label>
-                        <input type="text" placeholder="Email" name="email" id="email" class="itemForm" required>
+                        <input type="text" placeholder="Email" name="email" id="email" class="itemForm" required autofocus>
                         
                         <label for="name"></label>
                         <input type="text" placeholder="Nombre" name="name" id="name" class="itemForm" required>
                         
                         <label for="userName"></label>
-                        <input type="text" placeholder="User name" name="userName" id="userName" class="itemForm" required>
+                        <input type="text" placeholder="Username" name="userName" id="userName" class="itemForm" required>
     
                         <label for="password"></label>
-                        <input type="text" placeholder="Contraseña" name="password" id="password" class="itemForm" required>
+                        <input type="password" placeholder="Contraseña" name="password" id="password" class="itemForm" required>
     
-                        <button type="submit" class="logIn itemForm">Registrate</button>
+                        <button type="submit" class="logIn itemForm" value="registro">Registrate</button>
                     </form>
                 </div>
             </div>
@@ -84,5 +93,8 @@
     
 
     <script src="js/zonaIncome.js"></script>
+    <script src="./js/signup.js"></script>
+    <script type="module" src="./js/login.js"></script>
+    <script src="./js/logout.js"></script>
 </body>
 </html>

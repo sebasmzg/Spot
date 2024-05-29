@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="css/menu.css">
     <link rel="stylesheet" href="css/videos.css">
     <link rel="stylesheet" href="css/contentVideo.css">
+    <link rel="stylesheet" href="css/upLoadVideos.css">
 </head>
 <body>
     <section id="navBar">
@@ -61,100 +62,64 @@
         <section id="videoZone">
             <article id="videos">
                 <div class="content">
-
-                    <video class="video" src="../../assets/videos/Beautiful Medellín Colombia.mp4"loop>
+                    <video class="video" src="../../assets/videos/Cuanto cuesta visitar Guatape.mp4"loop>
                     </video>
-
-                    <div class="play">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-play" viewBox="0 0 16 16">
-                            <path d="M10.804 8 5 4.633v6.734zm.792-.696a.802.802 0 0 1 0 1.392l-6.363 3.692C4.713 12.69 4 12.345 4 11.692V4.308c0-.653.713-.998 1.233-.696z"/>
-                        </svg>
-                    </div>
-
-                    <div class="infoVideo">
-                        <div class="zoneInfo">
-                            <div class="profileVideo">
-                                <a href="../profile/profile.html">
-                                    <div class="imgProfile"></div>
-                                    <strong>Suares de los alpez</strong>
-                                </a>
-                            </div>
-                            <div class="description"><p>Es un gran lugar, yo se que te encantaria visitarlo</p>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- aqui esta la separacion de los likes -->
-                    <div class="interests">
-                        <div class="like">
-                            <button type="button" class="likeButton">
-                                <svg class="svgInteration" xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-heart-fill" viewBox="0 0 16 16">
-                                    <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314"/>
-                                  </svg>
-                            </button>
-                        </div>
-                    </div>
                 </div>
 
                 <div class="content">
-                    <video src=""></video>
-                    <div class="infoVideo">
-                        <div class="zoneInfo">
-                            <div class="profileVideo">
-                                <a href="../profile/profile.html">
-                                    <div class="imgProfile"></div>
-                                    <strong>Suares de los alpez</strong>
-                                </a>
-                            </div>
-                            <div class="description"><p>Es un gran lugar, yo se que te encantaria visitarlo</p>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- aqui esta la separacion de los likes -->
-                    <div class="interests">
-                        <div class="like">
-                            <button type="button" class="likeButton">
-                                <svg class="svgInteration" xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-heart-fill" viewBox="0 0 16 16">
-                                    <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314"/>
-                                  </svg>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="content">
-                    <div class="infoVideo">
-                        <div class="zoneInfo">
-                            <div class="profileVideo">
-                                <a href="../profile/profile.html">
-                                    <div class="imgProfile"></div>
-                                    <strong>Suares de los alpez</strong>
-                                </a>
-                            </div>
-                            <div class="description"><p>Es un gran lugar, yo se que te encantaria visitarlo</p>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- aqui esta la separacion de los likes -->
-                    <div class="interests">
-                        <div class="like">
-                            <button type="button" class="likeButton">
-                                <svg class="svgInteration" xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-heart-fill" viewBox="0 0 16 16">
-                                    <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314"/>
-                                  </svg>
-                            </button>
-                        </div>
-                    </div>
+                    <video class="video" src="../../assets/videos/Cuanto cuesta visitar Guatape.mp4"loop>
+                    </video>
                 </div>
             </article>
+
+
+            <section id="zoneUpLoadVideos">
+                <form action="" id="upLoadVideos">
+                    <input type="file" name="videoInput" id="videoInput" accept="upLoadVideos/*">
+
+                    <button type="submit">Enviar</button>
+                </form>
+            </section>
         </section>
     </main>
-
+    
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-    <script type="module" src="js/menu.js"></script>
-    <script src="js/videos.js"></script>
-    <script src="js/contentVideo.js"></script>
     <script src="js/likesInteration.js"></script>
+    <script type="module" src="js/menu.js"></script>
+    <script type="module" src="js/videos.js"></script>
+    <script type="module" src="js/contentVideo.js"></script>
+    <script type="module" src="js/upLoadVideos.js"></script>
     <!-- <script type="module" src="../../../menu.js"></script> -->
 </body>
 </html>
+
+
+<!-- <div class="play hidden">
+    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-play" viewBox="0 0 16 16">
+        <path d="M10.804 8 5 4.633v6.734zm.792-.696a.802.802 0 0 1 0 1.392l-6.363 3.692C4.713 12.69 4 12.345 4 11.692V4.308c0-.653.713-.998 1.233-.696z"/>
+    </svg>
+</div>
+
+<div class="infoVideo">
+    <div class="zoneInfo">
+        <div class="profileVideo">
+            <a href="../profile/profile.html">
+                <div class="imgProfile"></div>
+                <strong>Suares de los alpez</strong>
+            </a>
+        </div>
+        <div class="description"><p>Es un gran lugar, yo se que te encantaria visitarlo</p>
+        </div>
+    </div>
+</div>
+
+<div class="interests">
+    <div class="like">
+        <button type="button" class="likeButton">
+            <svg class="svgInteration" xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-heart-fill" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314"/>
+            </svg>
+        </button>
+    </div>
+</div> -->
