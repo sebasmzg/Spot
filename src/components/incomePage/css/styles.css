@@ -195,3 +195,10 @@ a{
     border-bottom: 1px dashed black;
     text-align: center;
 }
+
+
+/* icono password */
+
+.eye-icon {
+    right: 15px;
+}

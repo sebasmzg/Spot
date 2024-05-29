@@ -203,3 +203,22 @@
     text-decoration: none;
     cursor: pointer;
 }
+
+
+/* LogOut */
+
+#logout {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 20px;
+    background-color: rgba(255, 0, 0, 0.39);
+}
+
+#logout:hover {
+    background-color: rgba(255, 0, 0, 0.7);
+    color: white;
+}
