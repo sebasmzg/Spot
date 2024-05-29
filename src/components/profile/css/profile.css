@@ -1,0 +1,196 @@
+*{
+    box-sizing: border-box;
+    margin: 0%;
+    padding: 0%;
+}
+body{
+    background-color: rgba(206, 206, 206, 0.993);
+    width: 100%;
+    height: 800px;
+    display: flex;
+}
+
+/*codigo para la zona aside de navegacion y configuracion de botones*/
+.aside{
+    width: 27%;
+    height: inherit;
+    float: left;
+}
+
+main{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    padding: 1%;
+}
+
+.main-article {
+    width: 100%;
+    height: 35%;
+    /* background-color: rgba(0, 0, 0, 0.719); */
+    display: flex;
+    flex-direction: row;
+}
+
+.main-article-1{
+    /* background-color: rgba(0, 0, 0, 0.219);  */
+    width: 50%;
+    height: initial;
+    display: flex;
+    flex-direction: column;
+
+}
+.main-article-1 img{
+    width: 50%;
+    height:100%;
+    margin: auto;
+}
+
+.main-article-1 h2{
+    margin: auto;
+}
+
+.main-article-2{
+    /* background-color: rgba(0, 0, 0, 0.514);  */
+    width: 50%;
+    height: initial;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.main-buttom,
+.main-buttom2 {
+    width: 30%;
+    height: 10%;
+    float: left;
+    margin: 11% 0% 0% 0%;
+    border-radius: 10px;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 130%;
+    font-weight: 900;
+    color:  white;
+    background-color: rgba(0, 0, 0, 0.822);
+}
+.main-buttom:hover,
+.main-buttom2:hover{
+    background-color: rgba(0, 0, 0, 0.199);
+
+}
+
+.main-span {
+    width: 70%;
+    height: 50%;
+    /* background-color: blue; */
+    float: left;
+    margin: 8% 0% 0% 0%;
+}
+/* Zona media de la pagina con los botones de navegacion */
+.section-mid {
+    width: 100%;
+    height: 10%;
+    /* background-color: rgba(137, 43, 226, 0.466); */
+    /* border-bottom: 1px solid black; */
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.mid-buttom-0 img,
+.mid-buttom-1 img,
+.mid-buttom-2 img {
+    width: 30px;
+    height: 30px;
+}
+
+.mid-buttom-0,
+.mid-buttom-1,
+.mid-buttom-2{
+    width: 50px;
+    height: 50px;
+    border: 2px solid rgba(252, 252, 252, 0.658);
+    color: #fff;
+    background: #11111100;
+    position: relative;
+    border-radius: 10px;}
+
+.mid-buttom-0:active,
+.mid-buttom-1:active,
+.mid-buttom-2:active{
+    background-color: rgb(0, 153, 255);
+}
+
+
+/*Contenedor del grid*/
+.grid-zone {
+    width: 100%;
+    height: 60%;
+    background-color: rgba(0, 0, 255, 0.014);
+    overflow: auto;
+    border-radius: 1%;
+}
+
+/* Zone coments */
+
+.zona-comentarios{
+    background-color: rgba(0, 0, 0, 0.034);
+    width: 100%;
+    height: 400px;
+    overflow: auto;
+}
+
+/* fin zona comentarios */
+#Map{
+    width: 100%;
+    height: 100%;
+    background-color: aqua;
+    align-content: center;
+}
+#map1{
+    width: 90%;
+    height: 90%;
+    padding: 1% 1% 1% 1%;
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+    margin: auto;
+}
+
+/* codigo de grid */
+.grid {
+    display: grid;
+
+    grid-template-rows: 250px 250px;
+    grid-template-columns: 300px 300px 300px;
+
+
+    gap: 0.5%;
+    margin: 1% 1% 1% 1.5%;
+}
+.item-0,
+.item-1,
+.item-2,
+.item-3,
+.item-4,
+.item-5 {
+    grid-row: 150px;
+    grid-column: 150px;
+    background-color: rgb(1, 20, 20);
+    border-radius: 1%;
+
+}
+
+.item-0:hover,
+.item-1:hover,
+.item-2:hover,
+.item-3:hover,
+.item-4:hover,
+.item-5:hover{
+    background-color: rgba(0, 0, 0, 0.596);
+}
+
+#gridZone,
+#comentarios,
+#Map,
+.main-buttom2{
+    display: none;
+}

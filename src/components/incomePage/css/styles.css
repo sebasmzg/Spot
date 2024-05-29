@@ -29,8 +29,6 @@ a{
     background-color: rgb(132, 154, 226);
     border:1px solid rgb(75, 75, 75);
     border-radius: 15px;
-    font-size: 20px;
-    padding: 8px;
     margin-right: 5%;
     transition: background-color 0.3s, color 0.1s, padding 0.5s;
 }
@@ -48,7 +46,7 @@ a{
 /*income zone*/
 #incomeForm{
     position: fixed;
-    top: 50%;
+    top: 55%;
     left: 50%;
     transform: translate(-50%,-50%);
     background-color: rgb(235, 235, 235);
@@ -151,9 +149,10 @@ a{
     margin-top: 70px;
 }
 
-/* .logIn p{
-    background-color: blue;
-} */
+.logIn p{
+    margin: 3px;
+    display: flex;
+}
 
 #buttonLogIn{
     border: none;

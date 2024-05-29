@@ -8,7 +8,7 @@ body {
     margin: 0;
 }
 
-.buscar-contenedor {
+.search-container {
     background-color: #fff;
     width: 300px;
     border-radius: 30px;
@@ -16,13 +16,13 @@ body {
     padding: 30px;
 }
 
-.buscar-contenedor h2 {
+.search-container h2 {
     margin-top: 0;
     font-size: 18px;
     color: #333;
 }
 
-.buscar-contenedor input {
+.search-container input {
     width: 93%;
     padding: 10px;
     margin-bottom: 10px;

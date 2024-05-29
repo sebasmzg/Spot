@@ -3,16 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-
+   
+    
     <!-- Leaflet CSS -->
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
+    
     <!-- Leaflet Locate Control CSS -->
     <link rel="stylesheet" href="https://unpkg.com/leaflet.locatecontrol/dist/L.Control.Locate.min.css" />
+    
     <!-- Leaflet Routing Machine CSS -->
     <link rel="stylesheet" href="https://unpkg.com/leaflet-routing-machine@latest/dist/leaflet-routing-machine.css" />
+    
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="map.css">
-    <link rel="stylesheet" href="menu.css">
+    <link rel="stylesheet" href="./src/components/map/css/map.css">
+    <link rel="stylesheet" href="./src/components/menu/css/menu.css">
+    <link rel="stylesheet" href="index.css">
 
     <!--Icono pestaña-->
     <link rel="icon" href="./src/assets/img/logo_spot.png">
@@ -28,54 +33,56 @@
                     <div class="menuToggle"></div>
                     <ul>
                         <li class="list active" style="--clr: #f44336;">
-                            <a href="#">
-                                <span class="icon"><ion-icon name ="home-outline"></ion-icon></span>
-                                <span class="text">Home</span>
-                            </a>
-                        </li>
-                        <li class="list" style="--clr: #ffa117;">
-                            <a href="#">
-                                <span class="icon"><ion-icon name ="person-outline"></ion-icon></span>
-                                <span class="text">About</span>
-                            </a>
-                        </li>
-                        <li class="list" style="--clr: #0fc70f;">
-                            <a href="#">
-                                <span class="icon"><ion-icon name ="chatbubble-outline"></ion-icon></span>
-                                <span class="text">Message</span>
+                            <a href="index.html">
+                                <span class="icon"><ion-icon name ="map-outline"></ion-icon></span>
+                                <span class="text">Map</span>
                             </a>
                         </li>
                         <li class="list" style="--clr: #2196f3;">
-                            <a href="#">
-                                <span class="icon"><ion-icon name ="camera-outline"></ion-icon></span>
-                                <span class="text">Photos</span>
+                            <a href="./src/components/videoPage/videos.html">
+                                <span class="icon"><ion-icon name ="albums-outline"></ion-icon></span>
+                                <span class="text">Discover</span>
                             </a>
                         </li>
-                        <li class="list" style="--clr: #b821f3;">
+                        <li class="list" style="--clr: #e417ff;">
                             <a href="#">
-                                <span class="icon"><ion-icon name ="settings-outline"></ion-icon></span>
-                                <span class="text">perfil</span>
+                                <span class="icon"><ion-icon name ="search-outline"></ion-icon></span>
+                                <span class="text">Search</span>
+                            </a>
+                        </li>
+                        <li class="list" style="--clr: #ffa117;">
+                            <a href="./src/components/profile/profile.html">
+                                <span class="icon"><ion-icon name ="person-outline"></ion-icon></span>
+                                <span class="text">Profile</span>
                             </a>
                         </li>
                     </ul>
                 </div>
-            </div>
-            <div id="myModal" class="modal">
-                <div class="modal-content">
-                    <span class="close">&times;</span>
-                    <div id="modal-info"></div>
-                    <button id="startRouting">Cómo llegar</button>
+                <div id="myModal" class="modal">
+                    <div class="modal-content">
+                        <span class="close">&times;</span>
+                        <div id="modal-info"></div>
+                        <button id="startRouting">Cómo llegar</button>
+                    </div>
+                </div>
+                <div id="myModal2" class="modal">
+                    <div class="modal-content">
+                        <div id="modal-info">
+                            <p id="distance"></p>
+                        </div>
+                        <button id="stopRouting">Detener recorrido</button>
+                    </div>
+                </div>
+                <div class="btn-group">
+                    <button type="button" class="category">Arte</button>
+                    <button type="button" class="category">Música</button>
+                    <button type="button" class="category">Literatura</button>
+                    <button type="button" class="category">Danza</button>
+                    <button type="button" class="category">Historia</button>
+                    <button type="button" class="category">Evento</button>
                 </div>
             </div>
-            <!--
-            <div class="menu-navegacion">
-                <p id="distance"></p>
-                <p id="time"></p>
-                <button id="stopRouting">Detener recorrido</button>
-            </div>
-            -->
         </div>
-        
     </div>
     
 
@@ -87,10 +94,10 @@
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
     <script src="https://unpkg.com/leaflet.locatecontrol/dist/L.Control.Locate.min.js"></script>
     <script src="https://unpkg.com/leaflet-routing-machine@latest/dist/leaflet-routing-machine.js"></script>
-    
+
     <!--Script de la aplicación-->
-    <script src="map.js"></script>
-    <script src="menu.js"></script>
+    <script src="./src/components/map/js/map.js"></script>
+    <script type="module" src="menu.js"></script>
 
 </body>
 </html>

@@ -10,7 +10,7 @@
 <body>
     <header>
         <section id="incomeZoneButton">
-            <button id="incomeButton">Iniciar sesión</button>
+            <button class="btn" id="incomeButton">Iniciar sesión</button>
         </section>
     </header>
 
@@ -32,12 +32,12 @@
                 <p>Ingresa tu username y contraseña</p>
                 <form action="" class="form">
                     <label for="userName"></label>
-                    <input type="text" placeholder="User name" name="user_name" id="name" class="itemForm">
+                    <input type="text" placeholder="User name" name="user_name" id="name" class="itemForm" required>
                     
                     <label for="password"></label>
-                    <input type="text" placeholder="Contraseña" name="password" id="password" class="itemForm">
+                    <input type="text" placeholder="Contraseña" name="password" id="password" class="itemForm" required>
                     
-                    <button type="text" class="signIn itemForm">Ingresar</button>
+                    <button type="submit" class="signIn itemForm">Ingresar</button>
                 </form>
             </div>
     
@@ -54,18 +54,18 @@
                 <p>Crea tu cuenta</p>
                 <form action="" class="form">
                     <label for="email"></label>
-                    <input type="text" placeholder="Email" name="email" id="email" class="itemForm">
+                    <input type="text" placeholder="Email" name="email" id="email" class="itemForm" required>
                     
                     <label for="name"></label>
-                    <input type="text" placeholder="Nombre" name="name" id="name" class="itemForm">
+                    <input type="text" placeholder="Nombre" name="name" id="name" class="itemForm" required>
                     
                     <label for="userName"></label>
-                    <input type="text" placeholder="User name" name="userName" id="userName" class="itemForm">
+                    <input type="text" placeholder="User name" name="userName" id="userName" class="itemForm" required>
 
                     <label for="password"></label>
-                    <input type="text" placeholder="Contraseña" name="password" id="password" class="itemForm">
+                    <input type="text" placeholder="Contraseña" name="password" id="password" class="itemForm" required>
 
-                    <button type="text" class="logIn itemForm">Registrate</button>
+                    <button type="submit" class="logIn itemForm">Registrate</button>
                 </form>
             </div>
         </article>

@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="css/profile.css" />
+    <link href="dist/hamburgers.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../menu/css/menu.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet.locatecontrol/dist/L.Control.Locate.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
+
+  </head>
+  <body>
+
+
+
+    <!-- aside for the navgation menu -->
+    <aside class="aside">
+      <!-- <div class="aside-logo">
+        <img src="assets/img/Spot-logo_-removebg-preview.png" alt="logo img" />
+        <h2 class="h2-aside">Spot</h2>
+      </div>
+      <div class="aside-buttoms">
+        <a href="" class="aside-buttom-0"
+          ><img
+            src="assets/img/location_on_24dp_FILL0_wght400_GRAD0_opsz24.png"
+            alt="location img"
+          />
+          <h2 class="h2-aside">Mapa</h2></a
+        >
+        <a href="" class="aside-buttom-1"
+          ><img
+            src="assets/img/search_24dp_FILL0_wght400_GRAD0_opsz24.png"
+            alt="search img"
+          />
+          <h2 class="h2-aside">Busqueda</h2></a
+        >
+        <a href="" class="aside-buttom-2"
+          ><img
+            src="assets/img/slideshow_24dp_FILL0_wght400_GRAD0_opsz24.png"
+            alt="play img"
+          />
+          <h2 class="h2-aside">Videos</h2></a
+        >
+      </div>
+      <div class="aside-footer">
+        <a href="" class="aside-buttom-footer"
+          ><img
+            src="assets/img/person_24dp_FILL0_wght400_GRAD0_opsz24.png"
+            alt="person img"
+          />
+          <h2 class="h2-aside">Perfil</h2></a
+        >
+      </div> -->
+      <div class="navigation">
+        <div class="menuToggle"></div>
+        <ul>
+            <li class="list active" style="--clr: #f44336;">
+                <a href="index.html">
+                    <span class="icon"><ion-icon name ="map-outline"></ion-icon></span>
+                    <span class="text">Map</span>
+                </a>
+            </li>
+            <li class="list" style="--clr: #2196f3;">
+                <a href="./src/components/videoPage/videos.html">
+                    <span class="icon"><ion-icon name ="albums-outline"></ion-icon></span>
+                    <span class="text">Discover</span>
+                </a>
+            </li>
+            <li class="list" style="--clr: #e417ff;">
+                <a href="#">
+                    <span class="icon"><ion-icon name ="search-outline"></ion-icon></span>
+                    <span class="text">Search</span>
+                </a>
+            </li>
+            <li class="list" style="--clr: #ffa117;">
+                <a href="./profile.html">
+                    <span class="icon"><ion-icon name ="person-outline"></ion-icon></span>
+                    <span class="text">Profile</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    </aside>
+    <!-- finish of the aside -->
+
+
+    <!-- the main body of the page for contain the the articles and the other zones of it -->
+    <main>
+      <section class="main-article">
+        <div class="main-article-1">
+          <img
+            src="./assets/img/Spot-logo_-removebg-preview.png"
+            alt=""
+            class="main-img"
+          />
+          <h2 class="main-tittle">Spot: Turismo y Cultura</h2>
+        </div>
+        <div class="main-article-2">  
+          <button class="main-buttom" id="main-buttom">Seguir</button>
+          <button class="main-buttom2" id="main-buttom2">Ya sigues</button>
+          <span class="main-span">
+            Spot: turismo y cultura. <br />
+            Somos un espacio para compartir lo que te apasiona y tus gusto.
+            <br /><br />
+            tell: 111 222 3333. <br />
+            cll: C 12a #1234b
+          </span>
+        </div>
+      </section>
+
+      <nav class="section-mid">
+        <button href="" class="mid-buttom-0" id="mid-buttom-0">
+          <img
+            src="./assets/img/slideshow_24dp_FILL0_wght400_GRAD0_opsz24.png"
+            alt="reproductor logo"
+          />
+        </button>
+        <button href="" class="mid-buttom-1" id="mid-buttom-1">
+          <img
+            src="./assets/img/forum_24dp_FILL0_wght400_GRAD0_opsz24.png"
+            alt="comentarios logo"
+          />
+        </button>
+        <button href="" class="mid-buttom-2" id="mid-buttom-2">
+          <img
+            src="assets/img/location_on_24dp_FILL0_wght400_GRAD0_opsz24.png"
+            alt=""
+          />
+        </button>
+      </nav>
+
+      <!-- Zona para el grid -->
+
+      <article class="grid-zone" id="grid-zone">
+        <section id="gridZone">
+          <div class="grid">
+            <div class="item-0"></div>
+            <div class="item-1"></div>
+            <div class="item-2"></div>
+            <div class="item-3"></div>
+            <div class="item-4"></div>
+            <div class="item-5"></div>
+          </div>
+        </section>
+        <!-- Zona de comentarios -->
+
+        <section id="comentarios">
+          <div class="zona-comentarios">
+            <div class="caja-comentarios">
+              <script
+                src="https://utteranc.es/client.js"
+                repo="G4l4k4s/gestion-comentarios"
+                issue-term="pathname"
+                label="/*/*/"
+                theme="github-dark-orange"
+                crossorigin="anonymous"
+                async
+              ></script>
+            </div>
+          </div>
+        
+        </section>
+
+        <section id="Map">
+          <div id="map1">
+             <!-- <iframe width="880" height="480" src="https://www.openstreetmap.org/export/embed.html?bbox=-103.27148437500001%2C-8.494104537551882%2C-56.337890625%2C17.518344187852218&amp;layer=mapnik" style="border: 1px solid black"></iframe><br/><small><a href="https://www.openstreetmap.org/#map=5/4.631/-79.805">Ver el mapa más grande</a></small> -->
+             <script src="./src/components/map/js/map.js"></script>
+          </div>
+        </section>
+      </article>
+      </main>
+    <script src="../menu/js/menu.js"></script>
+    <script src="js/profile.js" defer></script>
+
+    <!-- script map -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+    <script src="https://unpkg.com/leaflet.locatecontrol/dist/L.Control.Locate.min.js"></script>
+
+    <!-- Script menu -->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="../../../menu.js"></script>
+
+  </body>
+</html>

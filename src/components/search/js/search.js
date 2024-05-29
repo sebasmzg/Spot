@@ -1,4 +1,4 @@
-
+//Evento `DOMContentLoaded`
 document.addEventListener('DOMContentLoaded', () => {
     // Eliminar elementos individuales al hacer clic en "✕".
     document.querySelectorAll('.eliminar').forEach(button => {
