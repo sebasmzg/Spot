@@ -5,7 +5,7 @@
 
 .content {
     position: absolute;
-    width: auto;
+    width: 445px;
     height: 100%;
     display: flex;
     align-items: center;
@@ -13,9 +13,9 @@
     transition: transform 0.5s ease;
 }
 
-.video{
+video{
     position: relative;
-    width: 100%;
+    width: 445px;
     height: 100%;
 }
 
