@@ -340,6 +340,37 @@ main {
   display: block;
 }
 
-@media only screen and (max-width: 600px) {
-  
+@media only screen and (max-width: 768px) {
+  main{
+    width: 60%;
+    height: auto;
+  }
+  .main-article,
+  .main-article,
+  .main-article-1,
+  .main-article-2{
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+  }
+  .section-mid{
+    margin-top: 70%;
+  }
+  .grid-zone{
+    width: 100%;
+  }
+  #comment-container{
+    display: flex;
+    justify-content: center;
+  }
+
+  .ctn-comments{
+    width: 60%;
+    word-wrap: break-word;
+
+  }
+  .ctn-comments1{
+    width:100%;
+  }
 }
