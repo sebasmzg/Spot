@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 /* Estilos para la pantalla de carga */
 
 #loading-screen {
@@ -22,47 +21,13 @@
 
 #loading-screen video {
     /*Ajusta el tamaño del video(pantalla de carga) a nuestro gusto o necesidad*/
-    width: 300px;
+    width: 500px;
     /*Ajusta el tamaño de altura del video(pantalla de carga) a nuestro gusto o necesidad*/
-    height: 300px;
+    height: 500px;
 }
 
 /*Se oculta el contenido principal mientras la pantalla de carga está activa*/
 #main-content {
     /*Oculta el contenido principal inicialmente*/
     display: none;
-=======
-/* Estilos para la pantalla de carga */
-
-#loading-screen {
-    /*Posiciona el contenedor de carga de manera fija en la ventana del navegador*/
-    position: fixed;
-    /*Ocupa el 100% del ancho de la ventana del navegador*/
-    width: 100%;
-    /*Establece la altura al 100% de la ventana del navegador*/
-    height: 100%;
-    /*Establece el fondo del contenedor en color blanco*/
-    background: #fff;
-    /*Utiliza el modelo de caja flexible para alinear el contenido*/
-    display: flex;
-    /*Centra el contenido(video de pantalla de carga) horizontalmente*/
-    justify-content: center;
-    /*Centra el contenido(video de pantalla de carga) verticalmente*/
-    align-items: center;
-    /*Asegura que el contenedor de carga se superponga a otros elementos de la página*/
-    z-index: 9999;
-}
-
-#loading-screen video {
-    /*Ajusta el tamaño del video(pantalla de carga) a nuestro gusto o necesidad*/
-    width: 300px;
-    /*Ajusta el tamaño de altura del video(pantalla de carga) a nuestro gusto o necesidad*/
-    height: 300px;
-}
-
-/*Se oculta el contenido principal mientras la pantalla de carga está activa*/
-#main-content {
-    /*Oculta el contenido principal inicialmente*/
-    display: none;
->>>>>>> 2a0d079fb78f20fe4cef8526bc87072905a000ea
 }

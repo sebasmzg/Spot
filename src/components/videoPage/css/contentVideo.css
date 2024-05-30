@@ -1,34 +1,21 @@
-/* #container {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-} */
-
 .hidden{
     display: none;
 }
 
 
 .content {
-    width: auto;
+    position: absolute;
+    width: 445px;
     height: 100%;
-    /* background-image: url(../../../assets/img/1065341338_018e9920a8_b1.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-size: 100% 100%; */
     display: flex;
     align-items: center;
     justify-content: center;
     transition: transform 0.5s ease;
-    /* border-radius: 20px; */
-    /* position: absolute; */
 }
 
-.video{
+video{
     position: relative;
-    width: 100%;
+    width: 445px;
     height: 100%;
 }
 
