@@ -1,3 +1,5 @@
+import { createNewPoint as createPointService } from '../../../../../../services/userService.js';
+
 var map = L.map('map', {
     zoomControl: false // deshabilita los controles de zoom predeterminados
 }).setView([6.2447472222222, -75.574827777778], 13); // crea un mapa y lo centra en una ubicación
@@ -57,58 +59,97 @@ var control = L.Routing.control({
     position: 'topleft',
 }).addTo(map);
 
-//funcion para crear marcador con icono y mostrar modal
-function createPoint(lat, lng, icon, card){
-    var point = L.marker([lat, lng], {icon: icon}).addTo(map); // añade un marcador con un icono
+
+
+
+// Define la función para crear el evento de clic
+function addClickEventToMarker(point, card, lat, lng) {
     point.on('click', function() {
-        var modal = document.getElementById('myModal'); // obtiene el modal
-        var modalContent = document.getElementById('modal-info'); // obtiene el contenido del modal
+        var modal = document.getElementById('myModal');
+        var modalContent = document.getElementById('modal-info');
+        modalContent.innerHTML = card;
 
-        modalContent.innerHTML = card; // añade el contenido al modal
+        var pointPos = map.latLngToContainerPoint(point.getLatLng());
+        modal.style.left = (pointPos.x - modal.offsetWidth / 2) + 'px';
+        modal.style.top = (pointPos.y - modal.offsetHeight) + 'px';
+        modal.style.display = 'block';
 
-        // Calcular posición del modal
-        var pointPos = map.latLngToContainerPoint(point.getLatLng()); // convierte la ubicación del marcador en coordenadas de contenedor
-        modal.style.left = (pointPos.x - modal.offsetWidth / 2) + 'px'; // establece la posición horizontal del modal
-        modal.style.top = (pointPos.y - modal.offsetHeight) + 'px';// establece la posición vertical del modal
-
-        modal.style.display = 'block'; // muestra el modal
-
-        document.getElementById('startRouting').onclick = function() { // añade un evento al botón de inicio de enrutamiento
+        document.getElementById('startRouting').onclick = function() {
             if (userLocation) {
-                // Establece la ruta desde la ubicación del usuario hasta el punto seleccionado
                 control.setWaypoints([userLocation, L.latLng(lat, lng)]);
-                modal.style.display = 'none'; // Cierra el modal
+                modal.style.display = 'none';
 
-                var modal2 = document.getElementById('myModal2'); // obtiene el modal2
-                modal2.style.display = 'block'; // muestra el modal2
-                 // Calcular posición del modal
-                var pointPos = map.latLngToContainerPoint(point.getLatLng()); // convierte la ubicación del marcador en coordenadas de contenedor
-                modal2.style.left = (pointPos.x - modal2.offsetWidth / 2) + 'px'; // establece la posición horizontal del modal
-                modal2.style.top = (pointPos.y - modal2.offsetHeight) + 'px';// establece la posición vertical del modal
-
-                
+                var modal2 = document.getElementById('myModal2');
+                modal2.style.display = 'block';
+                var pointPos = map.latLngToContainerPoint(point.getLatLng());
+                modal2.style.left = (pointPos.x - modal2.offsetWidth / 2) + 'px';
+                modal2.style.top = (pointPos.y - modal2.offsetHeight) + 'px';
             } else {
                 alert("Ubicación del usuario no encontrada.");
             }
         };
 
         document.getElementById('stopRouting').onclick = function() {
-            // Detiene el enrutamiento removiendo los puntos de ruta
             control.setWaypoints([]);
-            var modal2 = document.getElementById('myModal2'); // obtiene el modal2
-            modal2.style.display = 'none'; // oculta el modal2
+            var modal2 = document.getElementById('myModal2');
+            modal2.style.display = 'none';
 
-            var span2 = document.getElementsByClassName('close')[1]; // Obtener el segundo span (el del modal2)
-
-            span2.onclick = function() { // Añadir evento al segundo span
-            control.setWaypoints([]); // Detener el enrutamiento removiendo los puntos de ruta
-            modal2.style.display = 'none'; // Ocultar el modal2
-        };
-
+            var span2 = document.getElementsByClassName('close')[1];
+            span2.onclick = function() {
+                control.setWaypoints([]);
+                modal2.style.display = 'none';
+            };
         };
     });
 }
 
+let points = [];
+
+function createPoint(lat, lng, icon, category, card) {
+
+    // Verificar si el punto ya existe en el array points
+    if (points.some(p => p.lat === lat && p.lng === lng)) {
+        return; // Si ya existe, salir de la función
+    }
+
+    var point = L.marker([lat, lng], {icon: icon}).addTo(map);
+
+    const pointData = {
+        lat: lat,
+        lng: lng,
+        icon: icon,
+        category: category,
+        card: card
+    }
+
+    points.push(pointData);
+
+
+    // Asigna el evento de clic al marcador
+    addClickEventToMarker(point, card, lat, lng);
+}
+
+async function sendDataToBackend() {
+    try {
+        // Envía todos los puntos al backend en una sola solicitud
+        await createPointService(points);
+        console.log("Datos enviados al backend:", points);
+        // Borra los puntos después de enviarlos al backend
+        points = [];
+    } catch (error) {
+        console.error("Error al enviar los datos al backend:", error);
+    }
+}
+
+//crear los puntos en el mapa
+createPoint(6.219228982112051, -75.58360417670856, logoIcon,"historia", "<b>Nombre de spot</b><br>Información detallada del spot.");
+createPoint(6.217324106489384, -75.58774406747969, logoIcon,"danza", "<b>Nombre de spot</b><br>Información detallada del spot.");
+createPoint(6.225302013240884, -75.58525497750676, logoIcon,"musica", "<b>Nombre de spot</b><br>Información detallada del spot.");
+createPoint(6.218476004247808, -75.57238037419849, logoIcon,"deporte", "<b>Nombre de spot</b><br>Información detallada del spot.");
+
+
+// Envía los datos de los puntos al backend
+sendDataToBackend();
 
 // Evento que se dispara cuando se calcula una ruta
 control.on('routesfound', function(e) {
@@ -128,12 +169,6 @@ control.on('routesfound', function(e) {
 });
 
 
-//crear los puntos en el mapa
-createPoint(6.219228982112051, -75.58360417670856, logoIcon, "<b>Nombre de spot</b><br>Información detallada del spot.");
-createPoint(6.217324106489384, -75.58774406747969, logoIcon, "<b>Nombre de spot</b><br>Información detallada del spot.");
-createPoint(6.225302013240884, -75.58525497750676, logoIcon, "<b>Nombre de spot</b><br>Información detallada del spot.");
-createPoint(6.218476004247808, -75.57238037419849, logoIcon, "<b>Nombre de spot</b><br>Información detallada del spot.");
-
 //cerrar el modal
 var modal = document.getElementById('myModal');
 var modal2 = document.getElementById('myModal2');
@@ -151,7 +186,6 @@ window.onclick = function(event) { // cierra el modal si se hace clic fuera de �
         modal.style.display = 'none'
     }
 }
-
 
 /* botones de categoría */
 

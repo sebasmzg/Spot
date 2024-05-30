@@ -5,6 +5,7 @@
 }
 
 /* Estilos básicos para el modal */
+
 .modal, .modal2 {
     display: none; /* Oculto por defecto */
     position: absolute; /* Usar posición absoluta */
@@ -13,6 +14,8 @@
     border-radius: 5px;
     color: #ffffff;
 }
+
+/* boton enrutamiento */
 
 #startRouting {
     background-color: #4CAF50;
@@ -23,6 +26,8 @@
     cursor: pointer;
 }
 
+/* boton detener enrutamiento */
+
 #stopRouting {
     background-color: #af4c4c;
     color: white;
@@ -31,6 +36,9 @@
     border-radius: 5px;
     cursor: pointer;
 }
+
+
+/* Estilos para el contenido de modal */
 
 .modal-content {
     margin: 0 auto; /* Centrado horizontalmente */
@@ -165,7 +173,7 @@
     cursor: pointer;
 }
 
-/* Estilos para el modal */
+/* Estilos para el modal búsqueda */
 .modalSearch {
     display: none; /* Oculto por defecto */
     position: fixed; /* Fijo en la pantalla */
