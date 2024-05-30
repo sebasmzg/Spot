@@ -27,9 +27,9 @@ function videoUpload(files) {
         divContent.appendChild(video);
         createOverlayElements([divContent]);
         updateContentVideos();
-        updateDataContent(); // Llamar a esta función después de actualizar el contenido
+        //updateDataContent();
     } else {
-        console.log("No se subió nada");
+        alert("No se subió nada");
     }
 }
 
@@ -75,7 +75,7 @@ export function createOverlayElements(contentVideos) {
         profileImg.classList.add('imgProfile');
 
         const profileName = document.createElement('strong');
-        profileName.textContent = "Suares de los alpez";
+        profileName.textContent = "Perfil   ";
 
         profileVideo.appendChild(aProfile);
         aProfile.append(profileImg, profileName);
@@ -85,7 +85,7 @@ export function createOverlayElements(contentVideos) {
         description.classList.add('description');
 
         const textoDescription = document.createElement('p');
-        textoDescription.textContent = "Es un gran lugar, yo se que te encantaria visitarlo";
+        textoDescription.textContent = "Que gran lugar";
         description.appendChild(textoDescription);
 
         infoVideoDiv.appendChild(divZoneInfo);
@@ -132,10 +132,14 @@ export function createOverlayElements(contentVideos) {
         videosContait.appendChild(contentVideos[i]);
     }
 }
+
 divContent = document.querySelectorAll(".content");
 createOverlayElements(divContent);
 
-updateDataContent();
+//updateDataContent();
+//updateContentVideos();
+
+
 
 
 /* upLoadForm.addEventListener("click", (event) =>{
