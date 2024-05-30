@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="./src/components/map/css/map.css">
     <link rel="stylesheet" href="./src/components/menu/css/menu.css">
     <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="./src/components/loadingScreen/css/loadingScreen.css">
 
     <!--Icono pestaña-->
     <link rel="icon" href="./src/assets/img/logo_spot.png">
@@ -25,6 +26,13 @@
     <title>Spot</title>
 </head>
 <body>
+    <!-- Pantalla de carga -->
+    <div id="loading-screen">
+        <video id="loading-video" autoplay muted>
+            <source src="/src/assets/img/loadingScreen.mp4" type="video/mp4">
+        </video>
+    </div>
+
     <div class="container">
         
         <div class="map-container">
@@ -186,6 +194,7 @@
     <script src="./src/components/incomePage/js/zonaIncome.js"></script>
     <script src="./index.js"></script>
     <script src="./src/components/incomePage/js/logout.js"></script>
+    <script src="./src/components/loadingScreen/js/loadingScreen.js"></script>
 
 </body>
 </html>
