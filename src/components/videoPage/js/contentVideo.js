@@ -11,8 +11,8 @@ let currentVideoIndex = null;
 // let contentVideos = divContent;
 
 export function updateDataContent(){
-    clickLike();
     controlsVideos();
+    clickLike();
 }
 
 export function clickLike() {
