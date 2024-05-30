@@ -1,5 +1,5 @@
 // const translateYValue = `translateY(-${index * 100}%)`;
-import { hiddenPlay, repeatVideo } from "./contentVideo.js";
+import { hiddenPlay, repeatVideo} from "./contentVideo.js";
 import { divContent } from "./upLoadVideos.js";
 
 export let contentVideos = [divContent];
@@ -9,8 +9,8 @@ let isChanging = false; // Variable de control
 export function updateContentVideos() {
     contentVideos = document.querySelectorAll('.content');
     for (let i = 0; i < contentVideos.length; i++) {
+        //updateDataContent(contentVideos[i]);
         if (i > 0) {
-            console.log(i);
             contentVideos[contentVideos.length -1].style.transform = `translateY(${i * 100}%)`
         }
     }
@@ -71,6 +71,6 @@ function movement() {
     });
 }
 
-updateContentVideos();
 movement();
+updateContentVideos();
 

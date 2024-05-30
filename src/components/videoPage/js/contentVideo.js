@@ -1,11 +1,19 @@
 /* import { divContent} from "./upLoadVideos.js";
 import { updateContentVideos } from "./videos.js"; */
 
+import { divContent } from "./upLoadVideos.js";
 let likeButton = null;
 
 let video = null;
 let play = null;
 let currentVideoIndex = null;
+
+// let contentVideos = divContent;
+
+export function updateDataContent(){
+    clickLike();
+    controlsVideos();
+}
 
 export function clickLike() {
     likeButton = document.querySelectorAll(".likeButton");
@@ -67,7 +75,4 @@ export function controlsVideos() {
     }
 }
 
-export function updateDataContent(){
-    clickLike();
-    controlsVideos();
-}
+updateDataContent();
