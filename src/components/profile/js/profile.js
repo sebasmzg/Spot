@@ -7,24 +7,22 @@ const map2 = document.getElementById("Map");
 const mainButtom1 = document.getElementById("main-buttom");
 const mainButtom2 = document.getElementById("main-buttom2");
 
+/* script de boton seguir*/
 mainButtom1.addEventListener("click",() =>{
-    mainButtom2.classList.toggle("show");
+    mainButtom2.classList.toggle("show");      /* configurarion de boton seguir para que con cada click*/
     mainButtom1.classList.toggle("hidden");
 })
+/* fin de script de boton seguir*/
 
+/** script de botones de zona mid */
 mainButtom2.addEventListener("click",() =>{
     mainButtom1.classList.toggle("hidden");
     mainButtom2.classList.toggle("show");
 })
 
-// mainButtom1.onclick = function(){ 
-//     mainButtom1.style.display = "none";
-//     mainButtom2.style.display = "block";
-// }
-
 midButtom0.onclick = function(){
     grid.style.display = "block";
-    map2.style.display = "none";
+    map2.style.display = "none";           /** quita y da display block a los botones dela zona mid */
     Zcomen.style.display = "none";
 }
 
@@ -39,13 +37,9 @@ midButtom2.onclick = function(){
     Zcomen.style.display = "none";
     grid.style.display = "none";
 }
-// agregar contenido al grid
-
-// fin de agregar contenido al grid
-
+/* fin de scripts de botones zona mid*/
 
 // Script modals
-
 const openEls = document.querySelectorAll("[data-open]");
 const closeEls = document.querySelectorAll("[data-close]");
 const isVisible = "is-visible";
