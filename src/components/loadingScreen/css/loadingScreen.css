@@ -25,9 +25,3 @@
     /*Ajusta el tamaño de altura del video(pantalla de carga) a nuestro gusto o necesidad*/
     height: 300px;
 }
-
-/* Se oculta el contenido principal mientras la pantalla de carga está activa
-#main-content {
-    Oculta el contenido principal inicialmente
-    display: none;
-} */
