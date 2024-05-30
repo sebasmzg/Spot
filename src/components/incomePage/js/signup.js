@@ -34,9 +34,6 @@ signUp.addEventListener('submit',(e)=>{ // Evento submit del formulario
     localStorage.setItem('users', JSON.stringify(users)); // Guarda los usuarios en el localStorage
     alert('Usuario registrado correctamente'); // Muestra un mensaje de éxito
 
-    //redirect to login
- /*    document.getElementById('loginForm').scrollIntoView({behavior: 'smooth'}); */
-    /* window.location.href = 'income.html'; */
 
     const incomeForm = document.querySelector('#income');
     const registerForm = document.querySelector('#register');

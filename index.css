@@ -5,6 +5,7 @@
 }
 
 /* Estilos básicos para el modal */
+
 .modal, .modal2 {
     display: none; /* Oculto por defecto */
     position: absolute; /* Usar posición absoluta */
@@ -13,6 +14,8 @@
     border-radius: 5px;
     color: #ffffff;
 }
+
+/* boton enrutamiento */
 
 #startRouting {
     background-color: #4CAF50;
@@ -23,6 +26,8 @@
     cursor: pointer;
 }
 
+/* boton detener enrutamiento */
+
 #stopRouting {
     background-color: #af4c4c;
     color: white;
@@ -31,6 +36,9 @@
     border-radius: 5px;
     cursor: pointer;
 }
+
+
+/* Estilos para el contenido de modal */
 
 .modal-content {
     margin: 0 auto; /* Centrado horizontalmente */
@@ -165,7 +173,7 @@
     cursor: pointer;
 }
 
-/* Estilos para el modal */
+/* Estilos para el modal búsqueda */
 .modalSearch {
     display: none; /* Oculto por defecto */
     position: fixed; /* Fijo en la pantalla */
@@ -204,6 +212,61 @@
     cursor: pointer;
 }
 
+/* Botón añadir punto */
+#addPoint {
+    position: fixed;
+    bottom: 30px;
+    right: 50px;
+    z-index: 1000;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 20px;
+    background-color: #2f816f;
+    color: white;
+    cursor: pointer !important;
+}
+
+#addPoint:hover {
+    background-color: #4CAF50;
+}
+
+
+/* Modal añadir puntos */
+.modal-point {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+    padding-top: 60px;
+}
+
+.modal-content-point {
+    background-color: #fefefe;
+    margin: 5% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+}
+
+.close-point {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close-point:hover,
+.close-point:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
 
 /* LogOut */
 

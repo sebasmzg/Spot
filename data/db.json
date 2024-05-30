@@ -1,12 +1,3 @@
 {
-    "usuarios": [
-        {
-            "id": "prueba",
-            "name":"nombre del spot",
-            "lat":"6.245751960851815",
-            "lng":"-75.56307918612274",
-            "categories":"Historia",
-            "description":"descripcion del spot"
-        }
-    ]
+  "usuarios": []
 }

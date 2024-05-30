@@ -1,21 +1,36 @@
-export let video = document.querySelectorAll("video");
-let play = document.querySelectorAll(".play");
-let comenzarVideos = false;
+/* import { divContent} from "./upLoadVideos.js";
+import { updateContentVideos } from "./videos.js"; */
+
+import { divContent } from "./upLoadVideos.js";
+let likeButton = null;
+
+let video = null;
+let play = null;
 let currentVideoIndex = null;
 
-/* export function playVideo(videoIndex) {
-    if (comenzarVideos) {
-        for (let i = 0; i < video.length; i++) {
-            videoIndex = i;
-            if(videoIndex + 1 < video.length){
-                video[videoIndex + 1].play();
-                console.log("inicio");
-            }
-        }
-    }
-} */
+// let contentVideos = divContent;
 
-//hace que desaparesca el icono de play cuando cambia de video
+export function updateDataContent(){
+    controlsVideos();
+    clickLike();
+}
+
+export function clickLike() {
+    likeButton = document.querySelectorAll(".likeButton");
+    for (let i = 0; i < likeButton.length; i++) {
+        likeButton[i].addEventListener("click", () => {
+            if (!likeButton[i].classList.contains('colorRed')) {
+                likeButton[i].classList.add('colorRed');
+            } 
+            else {
+                likeButton[i].classList.remove('colorRed');
+            }        
+        });
+    }
+}
+
+
+
 export function hiddenPlay() {
     for (let i = 0; i < play.length; i++) {
         play[i].classList.add('hidden'); 
@@ -33,7 +48,6 @@ function pauseVideo(videoIndex) {
     if (videoIndex !== null) {
         video[videoIndex].pause();
         play[videoIndex].classList.remove('hidden');
-        console.log(videoIndex);
     }
 }
 
@@ -41,49 +55,24 @@ function playVideo(videoIndex) {
     if (videoIndex !== null) {
         video[videoIndex].play();
         play[videoIndex].classList.add('hidden');
-        console.log(videoIndex);
     }
 }
 
-/* function touchSpace(videoIndex) {
-    if (videoIndex !== null) {
-        if (video[videoIndex].paused) {
-            playVideo(videoIndex);
-            console.log(videoIndex);
-        } 
-        else{
-            pauseVideo(videoIndex);
-            console.log(videoIndex);
-        }
-    }
-} */
+export function controlsVideos() {
+    video = document.querySelectorAll("video");
+    play = document.querySelectorAll(".play");
 
-function controlsVideos() {
     for (let i = 0; i < video.length; i++) {
-        video[i].addEventListener("click", () =>{
+        video[i].addEventListener("click", () => {
             if (video[i].paused) {
-                /* video[i].play();
-                play[i].classList.add('hidden');
-                comenzarVideos = true; */
-                // pauseVideo(currentVideoIndex);
                 currentVideoIndex = i;
                 playVideo(currentVideoIndex);
             } 
             else {
                 pauseVideo(currentVideoIndex);
-                video[i].pause();
-                play[i].classList.remove('hidden');
             }
-        })
-        /* document.addEventListener('keydown', (event) => {
-            if (event.keyCode === 32) {
-                touchSpace(currentVideoIndex);
-                
-            }
-        }); */
-
+        });
     }
 }
 
-// pausedVideo();
-controlsVideos();
+updateDataContent();

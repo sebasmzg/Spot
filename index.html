@@ -37,34 +37,36 @@
         
         <div class="map-container">
             <div id="map">
+
+                <!-- Menú -->
                 <div class="navigation">
                     <div class="menuToggle"></div>
                     <ul>
-                        <li class="list">
+                        <li class="list active">
                             <a href="#">
                                 <img src="./src/assets/img/logo.png" alt="Logo Spot" class="icon">
                                 <span class="text">Spot</span>
                             </a>
                         </li>
-                        <li class="list active" style="--clr: #f44336;">
+                        <li class="list active" style="--clr: #000000;">
                             <a href="index.html">
                                 <span class="icon"><ion-icon name ="map-outline"></ion-icon></span>
                                 <span class="text">Map</span>
                             </a>
                         </li>
-                        <li class="list" style="--clr: #2196f3;">
+                        <li class="list" style="--clr: #000000;">
                             <a href="./src/components/videoPage/videos.html">
                                 <span class="icon"><ion-icon name ="albums-outline"></ion-icon></span>
                                 <span class="text">Discover</span>
                             </a>
                         </li>
-                        <li class="list" style="--clr: #e417ff;">
+                        <li class="list" style="--clr: #000000;">
                             <a href="#" id="openSearchModal">
                                 <span class="icon"><ion-icon name ="search-outline"></ion-icon></span>
                                 <span class="text">Search</span>
                             </a>
                         </li>
-                        <li class="list" style="--clr: #ffa117;">
+                        <li class="list" style="--clr: #000000;">
                             <a href="./src/components/profile/profile.html">
                                 <span class="icon"><ion-icon name ="person-outline"></ion-icon></span>
                                 <span class="text">Profile</span>
@@ -72,7 +74,10 @@
                         </li>
                     </ul>
                 </div>
+
                 <!-- MODALES -->
+
+                <!-- Modal de información punto exixtente --> 
                 <div id="myModal" class="modal">
                     <div class="modal-content">
                         <span class="close">&times;</span>
@@ -157,21 +162,52 @@
                         <button id="stopRouting">Detener recorrido</button>
                     </div>
                 </div>
-                <div class="btn-group">
-                    <div class="category-container">
-                        <button type="button" class="category" onclick="toggleActive(this)">Música</button>
-                        <button type="button" class="category" onclick="toggleActive(this)">Arte</button>
-                        <button type="button" class="category" onclick="toggleActive(this)">Literatura</button>
-                        <button type="button" class="category" onclick="toggleActive(this)">Danza</button>
-                        <button type="button" class="category" onclick="toggleActive(this)">Historia</button>
-                        <button type="button" class="category" onclick="toggleActive(this)">Evento</button>
-                        <button type="button" class="category" onclick="toggleActive(this)">Deporte</button>
+
+                <!-- Modal añadir punto -->
+                <div id="myModalPoint" class="modal-point">
+                    <div class="modal-content-point">
+                        <span class="close-point">&times;</span>
+                        <form id="pointForm">
+                            <label for="categorPointy">Categoría:</label>
+                            <input type="text" id="categoryPoint" name="categoryPoint" required><br>
+                            <label for="pointName">Nombre del Spot:</label>
+                            <input type="text" id="pointName" name="pointName" required><br>
+                            <label for="card">Información del punto:</label>
+                            <textarea id="cardPoint" name="cardPoint" required></textarea><br>
+                            <input type="hidden" id="lat" name="lat">
+                            <input type="hidden" id="lng" name="lng">
+                            <button type="submit">Agregar Spot</button>
+                        </form>
                     </div>
                 </div>
+
+                <!-- Botones categorías -->
+                <div class="btn-group">
+                    <div class="category-container">
+                        <button type="button" class="category" onclick="toggleActive(this)">Arte</button>
+                        <button type="button" class="category" onclick="toggleActive(this)">Literatura</button>
+                        <button type="button" class="category" onclick="toggleActive(this)">Música</button>
+                        <button type="button" class="category" onclick="toggleActive(this)">Danza</button>
+                        <button type="button" class="category" onclick="toggleActive(this)">Deporte</button>
+                        <button type="button" class="category" onclick="toggleActive(this)">Historia</button>
+                        <button type="button" class="category" onclick="toggleActive(this)">Evento</button>
+                    </div>
+                </div>
+
+                <!-- BOTONES -->
+
+                <!-- Botón para enviar datos al back -->
+                <div class="sendData">
+                    <button id="sendData">Añadir Spot</button>
+                </div>
+
                 <!-- logOut -->
                 <div class="logout">
                     <button id="logout">Logout</button>
                 </div>
+
+                <!-- Añadir punto -->
+                <button id="addPoint">Nuevo Spot</button>
             </div>
         </div>
     </div>
@@ -187,7 +223,7 @@
     <script src="https://unpkg.com/leaflet-routing-machine@latest/dist/leaflet-routing-machine.js"></script>
 
     <!--Script de la aplicación-->
-    <script src="./src/components/map/js/map.js"></script>
+    <script type="module" src="./src/components/map/js/map.js"></script>
     <script type="module" src="./src/components/menu/js/menu.js"></script>
     <script src="./src/components/search/js/search.js"></script>
     <script src="./src/components/incomePage/js/logout.js"></script>

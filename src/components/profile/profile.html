@@ -6,42 +6,56 @@
     <title>Document</title>
     <link rel="stylesheet" href="css/profile.css" />
     <link href="dist/hamburgers.css" rel="stylesheet" />
-    <link rel="stylesheet" href="../menu/css/menu.css">
-    <link rel="stylesheet" href="https://unpkg.com/leaflet.locatecontrol/dist/L.Control.Locate.min.css" />
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../menu/css/menu.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet.locatecontrol/dist/L.Control.Locate.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+      integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+      crossorigin=""
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
-
-
-
     <!-- aside for the navgation menu -->
     <aside class="aside">
       <div class="navigation">
         <div class="menuToggle"></div>
         <ul>
-            <li class="list active" style="--clr: #f44336;">
-                <a href="index.html">
+            <li class="list active">
+                <a href="#">
+                    <img src="./assets/img/Spot-logo_-removebg-preview.png" alt="Logo Spot" class="icon">
+                    <span class="text">Spot</span>
+                </a>
+            </li>
+            <li class="list active" style="--clr: #000000;">
+                <a href="../../../index.html">
                     <span class="icon"><ion-icon name ="map-outline"></ion-icon></span>
                     <span class="text">Map</span>
                 </a>
             </li>
-            <li class="list" style="--clr: #2196f3;">
-                <a href="./src/components/videoPage/videos.html">
+            <li class="list" style="--clr: #000000;">
+                <a href="../videoPage/videos.html">
                     <span class="icon"><ion-icon name ="albums-outline"></ion-icon></span>
                     <span class="text">Discover</span>
                 </a>
             </li>
-            <li class="list" style="--clr: #e417ff;">
-                <a href="#">
+            <li class="list" style="--clr: #000000;">
+                <a href="../search/search.html" id="openSearchModal">
                     <span class="icon"><ion-icon name ="search-outline"></ion-icon></span>
                     <span class="text">Search</span>
                 </a>
             </li>
-            <li class="list" style="--clr: #ffa117;">
-                <a href="./profile.html">
+            <li class="list" style="--clr: #000000;">
+                <a href="profile.html">
                     <span class="icon"><ion-icon name ="person-outline"></ion-icon></span>
                     <span class="text">Profile</span>
                 </a>
@@ -50,7 +64,6 @@
     </div>
     </aside>
     <!-- finish of the aside -->
-
 
     <!-- the main body of the page for contain the the articles and the other zones of it -->
     <main>
@@ -63,7 +76,7 @@
           />
           <h2 class="main-tittle">Spot: Turismo y Cultura</h2>
         </div>
-        <div class="main-article-2">  
+        <div class="main-article-2">
           <button class="main-buttom" id="main-buttom">Seguir</button>
           <button class="main-buttom2" id="main-buttom2">Ya sigues</button>
           <span class="main-span">
@@ -99,57 +112,83 @@
 
       <!-- Zona para el grid -->
 
-      <article class="grid-zone" id="grid-zone">
-        <section id="gridZone">
-          <div class="grid">
-            <div class="item-0"><div class="item-00"></div></div>
-            <div class="item-1"><div class="item-01"></div></div>
-            <div class="item-2"><div class="item-02"></div></div>
-            <div class="item-3"><div class="item-03"></div></div>
-            <div class="item-4"><div class="item-04"></div></div>
-            <div class="item-5"><div class="item-05"></div></div>
+      <section class="grid-zone" id="grid-zone">
+        <div id="gridZone">
+          <div class="zona-input">
+            <button type="button" class="open-modal" data-open="modal1">
+              Subir Archivos
+            </button>
           </div>
-        </section>
-        <!-- Zona de comentarios -->
 
+          <div class="grid-papa" id="grid-papa2"></div>
+        </div>
+
+        <!-- Zona de comentarios -->
         <section id="comentarios">
           <div class="zona-comentarios">
             <div class="caja-comentarios">
-
               <div id="comment-section">
                 <h3>Comments:</h3>
                 <div id="comment-container"></div>
               </div>
-              <br>
-              <br>
+              <br />
+              <br />
               <div class="ctn-input">
                 <h3>Leave a comment:</h3>
-                <textarea id="comment-input"></textarea><br>
+                <textarea id="comment-input"></textarea><br />
                 <button id="submit-button">Submit</button>
               </div>
             </div>
           </div>
-        
         </section>
 
         <section id="Map">
           <div id="map1">
-             <script src="./src/components/map/js/map.js"></script>
+            <script src="../src/components/map/js/map.js"></script>
           </div>
         </section>
-      </article>
-      </main>
+      </section>
+
+      <!-- zona de modals -->
+      <div class="modal" id="modal1" data-animation="slideInOutLeft">
+        <div class="modal-dialog">
+          <header class="modal-header">
+            <button class="close-modal" aria-label="close modal" data-close>
+              ✕
+            </button>
+          </header>
+          <section class="modal-content">
+            <p>
+              <strong
+                >Press ✕, ESC, or click outside of the modal to close it</strong
+              >
+            </p>
+            <br />
+            <input type="file" name="file" id="file" class="inputfile" />
+          </section>
+        </div>
+      </div>
+    </main>
     <script src="../menu/js/menu.js"></script>
     <script src="js/profile.js" defer></script>
 
     <!-- script map -->
-    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+    <script
+      src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+      integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+      crossorigin=""
+    ></script>
     <script src="https://unpkg.com/leaflet.locatecontrol/dist/L.Control.Locate.min.js"></script>
 
     <!-- Script menu -->
-    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
     <script src="../../../menu.js"></script>
-
   </body>
 </html>

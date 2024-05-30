@@ -7,5 +7,13 @@ document.getElementById('loading-video').addEventListener('ended', function() {
     //Llama y selecciona el elemento con el ID 'loading-screen' y oculta su display
     document.getElementById('loading-screen').style.display = 'none';
     //Su función es hacer que el contenedor de la pantalla de carga desaparezca
+<<<<<<< HEAD
     
 });
+=======
+
+    //Llama y selecciona el elemento con el ID 'main-content y muestra su display'
+    document.getElementById('main-content').style.display = 'block';
+    //Su función es hacer que el contenido principal de la página se muestre
+});
+>>>>>>> 462554b9bdf506ba2f78784140b2bdc61ba86e2f

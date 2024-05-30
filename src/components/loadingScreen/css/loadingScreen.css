@@ -21,7 +21,16 @@
 
 #loading-screen video {
     /*Ajusta el tamaño del video(pantalla de carga) a nuestro gusto o necesidad*/
-    width: 300px;
+    width: 500px;
     /*Ajusta el tamaño de altura del video(pantalla de carga) a nuestro gusto o necesidad*/
-    height: 300px;
+    height: 500px;
 }
+<<<<<<< HEAD
+=======
+
+/*Se oculta el contenido principal mientras la pantalla de carga está activa*/
+#main-content {
+    /*Oculta el contenido principal inicialmente*/
+    display: none;
+}
+>>>>>>> 462554b9bdf506ba2f78784140b2bdc61ba86e2f

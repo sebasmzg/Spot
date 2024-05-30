@@ -1,10 +1,37 @@
-#zoneUpLoadVideos{
-    right: 0;
+#zoneUpLoadVideos {
+    display: none;
     position: absolute;
+    right: 0;
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    max-width: 400px;
+    width: 20%;
+    text-align: center;
 }
-
-#upLoadVideos{
-    display: flex;
-    flex-direction: column;
-    background-color: aqua;
+#zoneUpLoadVideos h2 {
+    margin-bottom: 20px;
+    color: #333;
+}
+#videoInputLabel {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+#upLoadVideos button {
+    background-color: #28a745;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+#upLoadVideos button:hover {
+    background-color: #218838;
 }
