@@ -29,6 +29,8 @@
         
         <div class="map-container">
             <div id="map">
+
+                <!-- Menú -->
                 <div class="navigation">
                     <div class="menuToggle"></div>
                     <ul>
@@ -64,7 +66,10 @@
                         </li>
                     </ul>
                 </div>
+
                 <!-- MODALES -->
+
+                <!-- Modal de información punto exixtente --> 
                 <div id="myModal" class="modal">
                     <div class="modal-content">
                         <span class="close">&times;</span>
@@ -149,21 +154,52 @@
                         <button id="stopRouting">Detener recorrido</button>
                     </div>
                 </div>
-                <div class="btn-group">
-                    <div class="category-container">
-                        <button type="button" class="category" onclick="toggleActive(this)">Música</button>
-                        <button type="button" class="category" onclick="toggleActive(this)">Arte</button>
-                        <button type="button" class="category" onclick="toggleActive(this)">Literatura</button>
-                        <button type="button" class="category" onclick="toggleActive(this)">Danza</button>
-                        <button type="button" class="category" onclick="toggleActive(this)">Historia</button>
-                        <button type="button" class="category" onclick="toggleActive(this)">Evento</button>
-                        <button type="button" class="category" onclick="toggleActive(this)">Deporte</button>
+
+                <!-- Modal añadir punto -->
+                <div id="myModalPoint" class="modal-point">
+                    <div class="modal-content-point">
+                        <span class="close-point">&times;</span>
+                        <form id="pointForm">
+                            <label for="categorPointy">Categoría:</label>
+                            <input type="text" id="categoryPoint" name="categoryPoint" required><br>
+                            <label for="pointName">Nombre del Spot:</label>
+                            <input type="text" id="pointName" name="pointName" required><br>
+                            <label for="card">Información del punto:</label>
+                            <textarea id="cardPoint" name="cardPoint" required></textarea><br>
+                            <input type="hidden" id="lat" name="lat">
+                            <input type="hidden" id="lng" name="lng">
+                            <button type="submit">Agregar Spot</button>
+                        </form>
                     </div>
                 </div>
+
+                <!-- Botones categorías -->
+                <div class="btn-group">
+                    <div class="category-container">
+                        <button type="button" class="category" onclick="toggleActive(this)">Arte</button>
+                        <button type="button" class="category" onclick="toggleActive(this)">Literatura</button>
+                        <button type="button" class="category" onclick="toggleActive(this)">Música</button>
+                        <button type="button" class="category" onclick="toggleActive(this)">Danza</button>
+                        <button type="button" class="category" onclick="toggleActive(this)">Deporte</button>
+                        <button type="button" class="category" onclick="toggleActive(this)">Historia</button>
+                        <button type="button" class="category" onclick="toggleActive(this)">Evento</button>
+                    </div>
+                </div>
+
+                <!-- BOTONES -->
+
+                <!-- Botón para enviar datos al back -->
+                <div class="sendData">
+                    <button id="sendData">Añadir Spot</button>
+                </div>
+
                 <!-- logOut -->
                 <div class="logout">
                     <button id="logout">Logout</button>
                 </div>
+
+                <!-- Añadir punto -->
+                <button id="addPoint">Nuevo Spot</button>
             </div>
         </div>
     </div>
