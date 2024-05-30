@@ -1,4 +1,5 @@
 #zoneUpLoadVideos {
+    display: none;
     position: absolute;
     right: 0;
     background: #fff;
